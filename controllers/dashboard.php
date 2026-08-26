@@ -52,10 +52,10 @@ class Dashboard extends Controller {
 	public function products($id = 'view', $id2 = '') {
 		Auth::handleLogin();
 	    
-	    if ($id == 'new' ) {
+	    if ($id == 'create' ) {
 	        $this->view->categories = $this->model->categories();
-		    $this->view->title = ' New Listing | '.$this->_company()['c_name']; ; 
-		    $this->view->render('dashboard/listings/new');
+		    $this->view->title = ' New Products | '.$this->_company()['c_name']; ; 
+		    $this->view->render('dashboard/products/new');
 		    return; 
 	    }
 	    
