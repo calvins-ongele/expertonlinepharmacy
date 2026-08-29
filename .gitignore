@@ -2,8 +2,9 @@
 .env
 
 # Ignore an entire folder (always end with a forward slash)
-IanMain
-WUYO
+IanMain/
+WUYO/
+email_system/
 node_modules/
 dist/
 .vscode/

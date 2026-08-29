@@ -18,7 +18,7 @@
         <div class="content-wrapper px-4 py-2">
             <div class="content-header"> 
             </div>
-            <div class="content px-2">
+            <div class="content px-2">  
                 
                     <div class='container alert'>
                         <div class='table-responsive'>
@@ -27,10 +27,8 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Title</th>
-                                        <th>Price</th>
-                                        <th>Brand</th>
-                                        <th>Condition</th>
-                                        <th>Promote</th>
+                                        <th>Price</th> 
+                                        <th>Edit</th>
                                         <th>Delete</th>
                                     </tr>
                                 </thead>
@@ -38,12 +36,11 @@
                                     <?php $i = 0; foreach($this->data['products'] as $row) { $i++; ?>
                                     <tr>
                                         <td><?php echo $i ?></td>
-                                        <td><?php echo strtoupper($row['p_title']) ?> <a class='badge   btn-primary' href='/dashboard/listings/edit/<?php echo $row['p_ID'] ?>'><i class='fa fa-pencil'></i></a> </td>
-                                        <td><?php echo $row['p_price'] ?></td>
-                                        <td><?php echo $row['p_brand'] ?></td>
-                                        <td><?php echo $row['p_condition'] ?></td>
-                                        <td><a href='#' rel='<?php echo $row['p_ID'] ?>' class='badge badge-success sharepromote'>Promote</a> </td>
-                                        <td><a href='#' rel='<?php echo $row['p_ID'] ?>' class='badge badge-danger delproduct'>Delete</a> </td>
+                                        <td><?php echo strtoupper($row['title']) ?>  </td>
+                                        <td><?php echo $row['price'] ?></td> 
+                                         <td><a href='/dashboard/products/edit?id=<?= $row['id'] ?>' rel='<?= $row['id'] ?>' 
+                                                 class='badge badge-success  '>Edit</a> </td>
+                                        <td><a href='#' rel='<?php echo $row['id'] ?>' class='badge badge-danger delproduct'>Delete</a> </td>
                                     </tr>
                                     <?php } ?>
                                 </tbody>

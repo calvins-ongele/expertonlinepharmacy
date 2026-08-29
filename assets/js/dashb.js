@@ -1,32 +1,5 @@
-
-$('.addVariations').click(function(e) {
-    e.preventDefault(); 
-    const rando = Math.floor(Math.random() * 12500165892650);
-    
-    $('#tbodyx').append(`
-         <tr>
-            <td>#</td>
-            <td> <input type='hidden' name='rando[]' value='${rando}' >
-            <input name='evname[]' value='' placeholder='Eg VIP' > </td>
-            <td><input name='desc[]' value='' maxlength='100' ></td>
-            <td><input type='number' name='price[]' value='' ></td>
-            <td><input type='date' name='date[]' value='' ></td>
-            <td> </td>
-        </tr>
-    
-    `);
-});
-
-$('.dropVariation').click(function() {
-    const id = $(this).attr('rel');
-    let form = new FormData();
-    form.append('id', id);
-    if (confirm("Are you sure?")) {
-        const data = _data(form, 'dropVariation');
-        alert(data['msg']);
-        window.location.reload();
-    }
-});
+ 
+ 
 
 
  // Click the hidden file input when the button is clicked
@@ -52,147 +25,7 @@ $('.dropVariation').click(function() {
     
     });
     
-    
-$('#newproduct').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this);
-    form.append('body',  CKEDITOR.instances.ckeditor.getData() );
-    const data = _data(form, 'newproduct');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').html(data['msg']  ) ;
-    if (data['error'] == 'false') {
-        CKEDITOR.instances.ckeditor.setData('');
-        $('#newproduct').trigger('reset');
-    }
-});
-$('#newsalo').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this); 
-    const data = _data(form, 'newsalo');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').html(data['msg']  ) ;
-    if (data['error'] == 'false') { 
-        location.reload();
-        $('#newsalo').trigger('reset');
-    }
-});
-$('.dropEmployee').click(function() {
-    const id = $(this).attr('rel');
-    let form = new FormData();
-    form.append('id', id);
-    if (confirm("Are you sure?")) {
-        const data = _data(form, 'dropEmployee');
-        alert(data['msg']);
-        window.location.reload();
-    }
-});
-$('#saveemps').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this); 
-    const data = _data(form, 'manageemployees');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').html(data['msg']  ) ;
-    if (data['error'] == 'false') { 
-        location.reload();
-        $('#manageemployees').trigger('reset');
-    }
-});
-$('#saveevent_variation').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this); 
-    const data = _data(form, 'saveevent_variation');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').html(data['msg']  ) ;
-    if (data['error'] == 'false') { 
-        location.reload();
-        $('#saveevent_variation').trigger('reset');
-    }
-});
-$('.sendsalaries').click(function(e) {
-    e.preventDefault(); 
-    let form = new FormData($("#saveemps")[0]);
-    
-   if (confirm("Are you sure?")) {
-        const data = _data(form, 'sendsalaries');
-        $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-        $('.feedback').html(data['msg']  ) ;
-        if (data['error'] == 'false') { 
-            alert(data['msg']);
-        }
-   }
-    
-});
-
-$('.addEmployee').click(function(e) {
-    e.preventDefault(); 
-    
-    $('#tbodyx').append(`
-         <tr>
-            <td>#</td>
-            <td><input name='name[]' value='' > </td>
-            <td><input name='amount[]' value='' ></td>
-            <td><input name='phone[]' value='' ></td>
-            <td><select name='status[]'  ><option value='Active'>Active</option><option value='Inactive'  >Inactive</option></select></td>
-            <td> </td>
-        </tr>
-    
-    `);
-})
-
-
-$('#editproduct').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this);
-    form.append('body',  CKEDITOR.instances.ckeditor.getData() );
-    const data = _data(form, 'editproduct');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').html(data['msg']  ) ;
-    if (data['error'] == 'false') {
-       // CKEDITOR.instances.ckeditor.setData('');
-        //$('#editproduct').trigger('reset');
-    }
-});
-
-$('#newblog').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this);
-    form.append('body',  CKEDITOR.instances.ckeditor.getData() );
-    const data = _data(form, 'newblog');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').html(data['msg']  ) ; 
-});
-$('#editvideo').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this);
-    form.append('body',  CKEDITOR.instances.ckeditor.getData() );
-    const data = _data(form, 'editvideo');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').html(data['msg']  ) ; 
-});
-$('#GoLiveStart').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this);
-    form.append('body',  CKEDITOR.instances.ckeditor.getData() );
-    const data = _data(form, 'GoLiveStart');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    
-    
-    if (data['error'] == 'false') {
-        $('.feedback').html("Redirecting..."  ) ; 
-        window.location.href=`/dashboard/content/live/${data['msg']}`;
-        return
-    }
-    $('.feedback').html(data['msg']  ) ; 
-});
-$('#confirmdisbursement').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this);
-    const data = _data(form, 'confirmdisbursement');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').html(data['msg'] ) ;
-    if (data['error'] == 'false') $('#confirmdisbursement').trigger('reset');
-});
-
+   
 $('#contactus').submit(function(e) {
     e.preventDefault();
     let form = new FormData(this);
@@ -201,15 +34,7 @@ $('#contactus').submit(function(e) {
     $('.feedback').text(data['msg'] + " We will get back fast.") ;
     if (data['error'] == 'false') $('#contactus').trigger('reset');
 });
-
-$('#withdrawmoney').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this);
-    const data = _data(form, 'withdrawmoney');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').text(data['msg'] ) ;
-    if (data['error'] == 'false') $('#withdrawmoney').trigger('reset');
-});
+ 
 $('#sendemail').submit(function(e) {
     e.preventDefault();
     let form = new FormData(this);  
@@ -238,39 +63,7 @@ $('.wddelete').click(function() {
         alert(data['message']);
         window.location.reload();
     }
-});
-$('.terminatePan').click(function() {
-    const id = $(this).attr('rel');
-    let form = new FormData();
-    form.append('id', id);
-    if (confirm("Are you sure?")) {
-        const data = _data(form, 'terminatePan');
-        alert(data['message']);
-        window.location.reload();
-    }
-});
-$('.approvePlan').click(function() {
-    const id = $(this).attr('rel');
-    let form = new FormData();
-    form.append('id', id);
-    if (confirm("Are you sure?")) {
-        const data = _data(form, 'approvePlan');
-        alert(data['message']);
-        window.location.reload();
-    }
-});
-$('#approvetransaction').submit(function(e) {
-    e.preventDefault();
-    let form = new FormData(this);
-    const data = _data(form, 'approvetransaction');
-    $('.feedback').addClass(data['error'] == 'false'?'text-success':'text-danger');
-    $('.feedback').text(data['message']  ) ;
-    if (data['error'] == 'false') $('#approvetransaction').trigger('reset');
-    setTimeout(()=> {
-        location.href='index.php';
-    }, 2000)
-});
-
+}); 
 $('.udata').change(function() {
     const rel = $(this).attr('rel');
     const val = $(this).val();

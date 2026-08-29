@@ -64,7 +64,7 @@
                                         <div class='col-md-12 mb-2'>
                                             <div class='form-group'>
                                                 <label>Content Body</label>
-                                                <textarea type='text' id='ckeditor' class='form-control'></textarea>
+                                                <id type='text' id='my-editor'  > 
                                             </div>
                                         </div>
 
@@ -128,15 +128,11 @@
         </div>
 
 
-        <?php require DASHBOARD . 'includes/footer.inc.php' ?>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.8.0/ckeditor.js"></script>
-        <script src="/public/js/seo_analyzer.js"></script>
-        <script type="text/javascript">
-            //<![CDATA[
-            CKEDITOR.replace('ckeditor');
-            //]]>
-        </script>
+        <?php require DASHBOARD . 'includes/footer.inc.php' ?> 
+        
+        
         <script>
+            const editor = new ContentEditor({container: '#my-editor' }); 
  
             const analyzer = new SEOAnalyzer();
             analyzer.toggle();
@@ -164,16 +160,18 @@
                 tempDiv.innerHTML = htmlString;
                 return tempDiv.textContent || tempDiv.innerText || "";
             }
-           
-            CKEDITOR.instances.ckeditor.on('key', function(e) { 
-                const editortext = this.getData(); 
+            
+            
+            editor.on('key', function(e) {  
+                const editortext = e.data; 
                 renderReport(editortext);
                 const htmstring = editortext.split('</p>')[0] ?? "";     
                 if (!metadescriptionTouched) {
                     const stripedtags = stripTags(htmstring);
                     document.querySelector("textarea[name='meta_description']").value = stripedtags;
                 }
-            }); 
+
+            });
 
             // Attach auto-update triggers to form fields
             document.querySelectorAll('input, textarea').forEach(el => {
@@ -205,7 +203,7 @@
 
             const form = new FormData(newcategory);  
             form.set('slug', document.querySelector(".slug").textContent );
-            form.set('content', CKEDITOR.instances.ckeditor.getData() );
+            form.set('content', editor.get() );
             const response = await fetch("/myapp/requests", {method:"POST", body: form});
             const result   = await response.json();
 
@@ -236,8 +234,8 @@
               document.querySelector('input[name="title"]').value = data.title ?? "";
               document.querySelector('input[name="keyphrase"]').value = data.keyphrase ?? ""; 
               document.querySelector('input[name="oneline"]').value = data.quote_desc ?? "";
-              document.querySelector('textarea[name="meta_description"]').value = data.meta_description ?? "";
-              CKEDITOR.instances.ckeditor.setData( data.content ?? "" )
+              document.querySelector('textarea[name="meta_description"]').value = data.meta_description ?? ""; 
+              editor.get(""); 
 
             }
          });

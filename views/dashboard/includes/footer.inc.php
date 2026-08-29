@@ -13,6 +13,7 @@
 <script src='/assets/js/dashb.js?v=<?php echo rand() ?>'></script>
 <script src='/public/js/dashb-main.js?v=<?php echo rand() ?>'></script>
 <script src='/public/js/content-editor.js'></script>
+<script src="/public/js/seo_analyzer.js"></script>
 <?php require "public/includes/toast.inc.php" ?>
 <script>
       async function copy(item) {

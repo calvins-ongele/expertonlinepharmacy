@@ -16,8 +16,8 @@ define('USERNAME', $_ENV['DB_USER']);
 define('PASSWORD',$_ENV['DB_PASS']);
 define('DBNAME', $_ENV['DB_NAME']);
 define('CODE_VERSION', '1.0.0.0');
-define('SYSTEM', "public/assets/system");
-define('UPLOADS', "public/assets/uploads");
+define('SYSTEM', "public/assets/system/");
+define('UPLOADS', "public/assets/uploads/");
 define('CLASS_NAME', $rui);  
 define("WEBSITE","https://{$_SERVER['SERVER_NAME']}"); 
 define("MAX_UPLOAD_SIZE", (5242880) ); //5mbs //calc: $maxSize = 1 * 1024 * 1024; //1mb

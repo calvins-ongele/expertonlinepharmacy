@@ -9,9 +9,8 @@ class App {
 	private $_modelPath = 'model/'; 
 	private $_errorFile = 'err.php';
 	private $_defaultFile = 'index.php';
-	private $excluded_classes = array('market','checkout','content', 'services', 'property' );
-	private $excluded_methods = array('register','contribute','thankyou','lists', 'live','chat',
-	'order', 'blog', 'events','transparency','ourpaybill', 'pickaspot', 'sellers', 'agents', 'categories' );
+	private $excluded_classes = array( 'checkout',  'products', 'products' );
+	private $excluded_methods = array( 'blog', 'categories' );
 
     /**
      * Starts the App

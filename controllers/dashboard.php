@@ -53,7 +53,7 @@ class Dashboard extends Controller {
 		Auth::handleLogin();
 	    
 	    if ($id == 'create' ) {
-	        $this->view->categories = $this->model->categories();
+	        $this->view->categories = parent::categories();
 		    $this->view->title = ' New Products | '.$this->_company()['c_name']; ; 
 		    $this->view->render('dashboard/products/new');
 		    return; 
@@ -61,15 +61,15 @@ class Dashboard extends Controller {
 	    
 	    if ($id == 'edit' ) {
 	        $this->view->categories = $this->model->categories();
-	        $this->view->data = $this->model->getproductEdit($id2);
+	        $this->view->data = $this->model->getproducts();
 		    $this->view->title = ' Edit Listing | '.$this->_company()['c_name']; ; 
-		    $this->view->render('dashboard/listings/edit');
+		    $this->view->render('dashboard/products/edit');
 		    return;
 	    }
 	    
 	    $this->view->data = $this->model->getproducts();
 	    $this->view->title = ' View Listing | '.$this->_company()['c_name']; ; 
-	    $this->view->render('dashboard/listings/view');
+	    $this->view->render('dashboard/products/view');
 	    
 	}
 	  

@@ -769,6 +769,54 @@ class MyApp_Model extends Model
 		echo $this->_delete("categories", "id", [ $_POST['id'] ]);
 
 	}
+
+	public function manage_products() {
+		
+		if (!CSRF::isVerified($_POST['csrf_token'] ?? '')) {
+			echo $this->_ms(true, "Invalid CSRF token. Please refresh the page and try again.", '',403);
+			return;
+		}
+  
+		$cols = "category_id, title, price, keyphrase, overview, content";
+
+		if ($_POST['action'] == 'insert') {
+			
+            $file = '';
+            if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
+                $imagepath = CustomFunctions::uploadFile('file', UPLOADS);
+                if ($imagepath[0]) die($this->_ms(true, $imagepath[1], '', 400 )); 
+                $file = $imagepath[1];
+            }
+
+			$urlAvailable = $this->urlAvailable($_POST['slug'], 'products', 'slug' );
+
+			echo $this->_insert("products", "$cols, slug, image", [
+				$_POST['category'], $_POST['title'], $_POST['price'],$_POST['keyphrase'], 
+				$_POST['meta_description'], $_POST['content'], $urlAvailable, $file 
+			]);
+			return;
+		}
+		
+		if ($_POST['action'] == 'update') {
+			
+            $file = '';
+            if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
+                $imagepath = CustomFunctions::uploadFile('file', UPLOADS);
+                if (!$imagepath[0]) {
+					$this->_update("products", "image", "id", [ $file, $_POST['id'] ]);
+				} 
+                $file = $imagepath[1];
+            }
+
+			echo $this->_update("products", "$cols", "id", [
+				$_POST['category'],$_POST['title'], $_POST['price'], $_POST['keyphrase'],
+				$_POST['meta_description'], $_POST['content'], $_POST['id'] 
+			]);
+			return;
+		}
+
+		echo $this->_delete("products", "id", [ $_POST['id'] ]);
+	}
         
          
 
