@@ -48,35 +48,26 @@
                         <p class="hero-placeholder__price-qualifier" data-astro-cid-d257t26o>Weight loss treatments with no long-term commitment.</p>
                     </div>
                 </div>
-                <div class="hero-placeholder__categories" data-astro-cid-d257t26o> <a class="category-card" href="/weight-loss/" data-astro-cid-f3saawlv> <span class="category-card__image" data-astro-cid-f3saawlv>
-                            <picture data-astro-cid-f3saawlv="true">
-                                <source srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp 240w" type="image/webp" sizes="80px">
-                                <source srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp 240w" type="image/webp" sizes="80px"> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp" srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/weight-care.MYWSUwrI.webp 240w" alt sizes="80px" loading="lazy" decoding="async" data-astro-cid-f3saawlv="true" fetchpriority="auto" width="80" height="80">
-                            </picture>
-                        </span> <span class="category-card__label" data-astro-cid-f3saawlv>Weight loss</span> <span class="category-card__arrow" aria-hidden="true" data-astro-cid-f3saawlv> <svg viewBox="0 0 24 24" fill="none" data-astro-cid-f3saawlv>
-                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-f3saawlv></path>
-                            </svg> </span> </a> <a class="category-card" href="https://www.simpleonlinepharmacy.co.uk/online-doctor/hair-loss/" data-astro-cid-f3saawlv> <span class="category-card__image" data-astro-cid-f3saawlv>
-                            <picture data-astro-cid-f3saawlv="true">
-                                <source srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp 240w" type="image/webp" sizes="80px">
-                                <source srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp 240w" type="image/webp" sizes="80px"> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp" srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/hair-loss.B3mLz3fO.webp 240w" alt sizes="80px" loading="lazy" decoding="async" data-astro-cid-f3saawlv="true" fetchpriority="auto" width="80" height="80">
-                            </picture>
-                        </span> <span class="category-card__label" data-astro-cid-f3saawlv>Hair loss</span> <span class="category-card__arrow" aria-hidden="true" data-astro-cid-f3saawlv> <svg viewBox="0 0 24 24" fill="none" data-astro-cid-f3saawlv>
-                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-f3saawlv></path>
-                            </svg> </span> </a> <a class="category-card" href="https://www.simpleonlinepharmacy.co.uk/online-doctor/contraceptive-pill-online/" data-astro-cid-f3saawlv> <span class="category-card__image" data-astro-cid-f3saawlv>
-                            <picture data-astro-cid-f3saawlv="true">
-                                <source srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp 240w" type="image/webp" sizes="80px">
-                                <source srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp 240w" type="image/webp" sizes="80px"> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp" srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/womens-health.DI3aRlD9.webp 240w" alt sizes="80px" loading="lazy" decoding="async" data-astro-cid-f3saawlv="true" fetchpriority="auto" width="80" height="80">
-                            </picture>
-                        </span> <span class="category-card__label" data-astro-cid-f3saawlv>Contraception</span> <span class="category-card__arrow" aria-hidden="true" data-astro-cid-f3saawlv> <svg viewBox="0 0 24 24" fill="none" data-astro-cid-f3saawlv>
-                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-f3saawlv></path>
-                            </svg> </span> </a> <a class="category-card" href="https://www.simpleonlinepharmacy.co.uk/online-doctor/erectile-dysfunction/" data-astro-cid-f3saawlv> <span class="category-card__image" data-astro-cid-f3saawlv>
-                            <picture data-astro-cid-f3saawlv="true">
-                                <source srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp 240w" type="image/webp" sizes="80px">
-                                <source srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp 240w" type="image/webp" sizes="80px"> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp" srcset="https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp 80w, https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp 160w, https://assets.simpleonlinepharmacy.co.uk/_astro/mens-health.C-oa6BJV.webp 240w" alt sizes="80px" loading="lazy" decoding="async" data-astro-cid-f3saawlv="true" fetchpriority="auto" width="80" height="80">
-                            </picture>
-                        </span> <span class="category-card__label" data-astro-cid-f3saawlv>Erectile Dysfunction</span> <span class="category-card__arrow" aria-hidden="true" data-astro-cid-f3saawlv> <svg viewBox="0 0 24 24" fill="none" data-astro-cid-f3saawlv>
-                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-f3saawlv></path>
-                            </svg> </span> </a> </div>
+                <div class="hero-placeholder__categories" data-astro-cid-d257t26o> 
+                    
+                        <?php foreach($this->_categories as $row) { ?>
+                        <a class="category-card" href="/products/categories/<?= $row['slug'] ?>/" data-astro-cid-f3saawlv> 
+                            <span class="category-card__image" data-astro-cid-f3saawlv>
+                                <picture data-astro-cid-f3saawlv="true">
+                                    <source srcset="/<?= $row['image'] ?> 80w, /<?= $row['image'] ?> 160w, /<?= $row['image'] ?> 240w" type="image/webp" sizes="80px">
+                                    <source srcset="/<?= $row['image'] ?> 80w, /<?= $row['image'] ?> 160w, /<?= $row['image'] ?> 240w" type="image/webp" sizes="80px"> <img src="/<?= $row['image'] ?>" srcset="/<?= $row['image'] ?> 80w, /<?= $row['image'] ?> 160w, /<?= $row['image'] ?> 240w" alt sizes="80px" loading="lazy" decoding="async" data-astro-cid-f3saawlv="true" fetchpriority="auto" width="80" height="80">
+                                </picture>
+                            </span> 
+                            <span class="category-card__label" data-astro-cid-f3saawlv><?= $row['title'] ?></span> 
+                            <span class="category-card__arrow" aria-hidden="true" data-astro-cid-f3saawlv> <svg viewBox="0 0 24 24" fill="none" data-astro-cid-f3saawlv>
+                                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-f3saawlv></path>
+                                </svg> 
+                            </span> 
+                        </a> 
+                        <?php } ?>
+                            
+                            
+                              </div>
             </div>
         </section>
         <section class="trust" data-component="trust" data-astro-cid-biyz2x6i>

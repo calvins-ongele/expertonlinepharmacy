@@ -777,7 +777,7 @@ class MyApp_Model extends Model
 			return;
 		}
   
-		$cols = "category_id, title, price, keyphrase, overview, content";
+		$cols = "category_id, title, price, keyphrase, overview, content, drug_type";
 
 		if ($_POST['action'] == 'insert') {
 			
@@ -792,7 +792,7 @@ class MyApp_Model extends Model
 
 			echo $this->_insert("products", "$cols, slug, image", [
 				$_POST['category'], $_POST['title'], $_POST['price'],$_POST['keyphrase'], 
-				$_POST['meta_description'], $_POST['content'], $urlAvailable, $file 
+				$_POST['meta_description'], $_POST['content'], $_POST['drug_type'], $urlAvailable, $file 
 			]);
 			return;
 		}
@@ -810,7 +810,7 @@ class MyApp_Model extends Model
 
 			echo $this->_update("products", "$cols", "id", [
 				$_POST['category'],$_POST['title'], $_POST['price'], $_POST['keyphrase'],
-				$_POST['meta_description'], $_POST['content'], $_POST['id'] 
+				$_POST['meta_description'], $_POST['content'], $_POST['drug_type'], $_POST['id'] 
 			]);
 			return;
 		}

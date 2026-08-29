@@ -9,7 +9,7 @@ class App {
 	private $_modelPath = 'model/'; 
 	private $_errorFile = 'err.php';
 	private $_defaultFile = 'index.php';
-	private $excluded_classes = array( 'checkout',  'products', 'products' );
+	private $excluded_classes = array( 'checkout',  'products' );
 	private $excluded_methods = array( 'blog', 'categories' );
 
     /**

@@ -43,7 +43,7 @@
             </div>
             <div class="footer__info" data-astro-cid-wxezf4vu>
                 <p data-astro-cid-wxezf4vu>
-                    <?= $this->_company['c_name'] ?> is owned by the UK registered company: <strong data-astro-cid-wxezf4vu>Simple Online Healthcare Limited</strong>
+                    <?= $this->_company['c_name'] ?> is owned by the UK registered company: <strong data-astro-cid-wxezf4vu><?= $this->_company['c_name'] ?> Limited</strong>
                     (company no: <strong data-astro-cid-wxezf4vu>SC498329</strong>)
                 </p>
                 <p data-astro-cid-wxezf4vu> <strong data-astro-cid-wxezf4vu>Registered Office:</strong><br data-astro-cid-wxezf4vu>

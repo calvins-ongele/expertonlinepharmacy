@@ -63,6 +63,22 @@
                                         </select>
                                     </div>
                                 </div>
+
+                                
+                                <div class='col-md-12 mb-3'>
+                                    <div class='form-group'>
+                                        <label>Drug Type</label>
+                                        <select type='text' name='injection' class='form-control' required>
+                                            <option value='' hidden>Select drug type</option>
+                                        
+                                             <option value='pill'>Pill</option>
+                                             <option value='injection'>Injection</option>
+                                         
+                                        </select>
+                                    </div>
+                                </div>
+
+
                             </div>
                             
                             <div class='row'>
