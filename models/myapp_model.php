@@ -741,8 +741,8 @@ class MyApp_Model extends Model
 
 			$urlAvailable = $this->urlAvailable($_POST['slug'], 'categories', 'slug' );
 
-			echo $this->_insert("categories", "title, quote_desc, meta_description, short_desc, content, image, slug, keyphrase", [
-				$_POST['title'], $_POST['oneline'], $_POST['meta_description'], $_POST['meta_description'], $_POST['content'],
+			echo $this->_insert("categories", "category_type, title, quote_desc, meta_description, short_desc, content, image, slug, keyphrase", [
+				$_POST['type'], $_POST['title'], $_POST['oneline'], $_POST['meta_description'], $_POST['meta_description'], $_POST['content'],
 				$file, $urlAvailable, $_POST['keyphrase']
 			]);
 			return;
@@ -759,8 +759,8 @@ class MyApp_Model extends Model
                 $file = $imagepath[1];
             }
 
-			echo $this->_update("categories", "title, quote_desc, meta_description, short_desc, content, keyphrase", "id", [
-				$_POST['title'], $_POST['oneline'], $_POST['meta_description'], $_POST['meta_description'], $_POST['content'],
+			echo $this->_update("categories", "category_type, title, quote_desc, meta_description, short_desc, content, keyphrase", "id", [
+				$_POST['type'], $_POST['title'], $_POST['oneline'], $_POST['meta_description'], $_POST['meta_description'], $_POST['content'],
 				$_POST['keyphrase'], $_POST['id'] 
 			]);
 			return;
@@ -816,6 +816,56 @@ class MyApp_Model extends Model
 		}
 
 		echo $this->_delete("products", "id", [ $_POST['id'] ]);
+	}
+
+
+	
+
+	public function manage_blog() {
+		
+		if (!CSRF::isVerified($_POST['csrf_token'] ?? '')) {
+			echo $this->_ms(true, "Invalid CSRF token. Please refresh the page and try again.", '',403);
+			return;
+		}
+
+		if ($_POST['action'] == 'insert') {
+			
+            $file = '';
+            if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
+                $imagepath = CustomFunctions::uploadFile('file', UPLOADS);
+                if ($imagepath[0]) die($this->_ms(true, $imagepath[1], '', 400 )); 
+                $file = $imagepath[1];
+            }
+
+			$urlAvailable = $this->urlAvailable($_POST['slug'], 'blog', 'slug' );
+
+			echo $this->_insert("blog", "title, meta, short_desc, content, image, slug, keyphrase, category_id", [
+				$_POST['title'], $_POST['meta_description'], $_POST['meta_description'], $_POST['content'],
+				$file, $urlAvailable, $_POST['keyphrase'], $_POST['category']
+			]);
+			return;
+		}
+		
+		if ($_POST['action'] == 'update') {
+			
+            $file = '';
+            if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
+                $imagepath = CustomFunctions::uploadFile('file', UPLOADS);
+                if (!$imagepath[0]) {
+					$this->_update("blog", "image", "id", [ $file, $_POST['id'] ]);
+				} 
+                $file = $imagepath[1];
+            }
+
+			echo $this->_update("blog", "title, meta, short_desc, content, keyphrase, category_id", "id", [
+				$_POST['title'], $_POST['meta_description'], $_POST['meta_description'], $_POST['content'],
+				$_POST['keyphrase'], $_POST['category'], $_POST['id'] 
+			]);
+			return;
+		}
+
+		echo $this->_delete("blog", "id", [ $_POST['id'] ]);
+
 	}
         
          

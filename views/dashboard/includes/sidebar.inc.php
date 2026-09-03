@@ -111,32 +111,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                  
+                                
                                 <li class="nav-item">
+                                    <a href="/dashboard/content" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pages & Blog</p>
+                                    </a>
                                     <a href="/dashboard/content/new" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Upload Video </p>
+                                        <p>New Content</p>
                                     </a>
-                                </li> 
-                                <li class="nav-item">
-                                    <a href="/dashboard/content/live" class="nav-link">
+                                    <a href="/dashboard/content/categories" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Go Live</p>
-                                    </a>
-                                </li> 
-                                <li class="nav-item">
-                                    <a href="/dashboard/content/videos" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>My Videos</p>
-                                    </a>
-                                </li> 
-                                <li class="nav-item">
-                                    <a href="/dashboard/content/blog" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>My Blog</p>
-                                    </a>
-                                    <a href="/dashboard/content/blog/new" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>New Blog</p>
+                                        <p>Categories</p>
                                     </a>
                                 </li> 
                           

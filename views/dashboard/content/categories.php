@@ -9,7 +9,7 @@
     <main class="wrapper">
 
         <?php
-        $pageid = 'products';
+        $pageid = 'content';
         require 'public/includes/counties.php';
         require DASHBOARD . 'includes/sidebar.inc.php' ?>
 
@@ -29,7 +29,7 @@
                                     <input type="hidden" name="csrf_token" value="<?= CSRF::get() ?>" />
                                     <input type="hidden" name="action" value="insert" />
                                     <input type="hidden" name="id" value="" />
-                                    <input type="hidden" name="type" value="products" />
+                                    <input type="hidden" name="type" value="blog" />
 
                                     <div class='row'>
                                         <div class='col-md-12 mb-2'>
@@ -109,7 +109,7 @@
                                     <tbody>
                                         <?php $i = 0;
                                         foreach ($this->_categories as $row) {
-                                            if ( $row['category_type'] == 'blog' ) continue;
+                                            if ( $row['category_type'] !== 'blog' ) continue;
                                             $i++; ?>
                                             <tr>
                                                 <td><?= $i ?></td>

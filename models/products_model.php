@@ -10,7 +10,17 @@ class Products_Model extends Model {
     public function getProducts($url = '') {
 
         if (!empty($url)) {
-            return $this->_get('products', 'slug', [$url],0)[1];
+            //return $this->_get('products', 'slug', [$url],0)[1];
+            $sql = "SELECT products.*, c.title as categ_title, c.slug as categ_slug
+            FROM products
+            LEFT JOIN categories c ON c.id=products.category_id
+            WHERE products.slug = ?
+            ";
+
+           $data = $this->_query("$sql ", [$url])[1][0] ?? [];
+           //$data['content'] = '';
+          // print_r($data);
+           return $data;
         }
          
         $sql = "SELECT * FROM products ";

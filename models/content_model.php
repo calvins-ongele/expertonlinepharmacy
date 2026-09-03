@@ -1,6 +1,6 @@
 <?php
 
-class Blog_Model extends Model
+class Content_Model extends Model
 {
 	public function __construct() {
 		parent::__construct();
@@ -9,19 +9,23 @@ class Blog_Model extends Model
  
 	public function getblog($url = '' ) {
 	    if (!empty($url)) {
-	        $data = $this->_get('blog left join blog_categories on blog_category_fk = bc_ID   ', 'blog_slug', [$url], 0  )[1];
+	        $data = $this->_get('
+			* blog.*, categories.title as category_title, categories.slug as category_slug 
+			FROM
+			blog left join categories on category_id = categories.id   ', 'blog.slug', [$url], 0  )[1];
 	        if (empty($data)) return false;
 	        return 
 	        [
 	            $data,
-	            $this->_get('blog left join blog_categories on blog_category_fk = bc_ID  ', 'bc_name =, bc_ID !=', [$data['bc_name'], $data['bc_ID']], true, 
-	            'order by blog_ID desc limit 20' )
+	            $this->_get('blog left join categories on category_id = categories.id  ', 'categories.slug =, categories.id !=', 
+				[$data['category_slug'], $data['category_id']], true, 
+	            'order by categories.id desc limit 20' )
 	        
 	        ];
 	    }
 	    
 	    
-	    return $this->_get("blog left join blog_categories on blog_category_fk = bc_ID  order by blog_ID desc {$this->pagination()} ") ;
+	    return $this->_get("blog order by blog.id desc {$this->pagination()} ") ;
 	}
 	public function getblogcategories($categ = '') { 
 	    

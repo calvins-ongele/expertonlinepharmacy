@@ -73,59 +73,30 @@ class Dashboard extends Controller {
 	    
 	}
 	  
-	public function cardpayment() {	
-		Auth::handleLogin();
-	    $this->view->accounts = $this->model->list_accounts_cards();   
-		$this->view->title = ' Pay/deposit with Paypal | '.$this->_company()['c_name']; ; 
-		$this->view->render('dashboard/deposit/cardpayment');
-	}
-	public function content($id = 'videos', $videouri = '') {
-		Auth::handleLogin();
-	    
-	    if ($id == 'new' ) { 
-		    $this->view->title = 'Upload Videos | '.$this->_company()['c_name']; ; 
-		    $this->view->render('dashboard/content/new');
-		    return;
-	    }
-	    if ($id == 'blog') {
-	        if ($videouri == 'new') {
-	            
-    		    $this->view->title = 'New Blog | '.$this->_company()['c_name']; ; 
-    		    $this->view->render('dashboard/content/newblog');
-    		    return;
-	        }
-	        
-            $this->view->data = $this->model->getblogaccounts();
-		    $this->view->title = 'My Blog Posts | '.$this->_company()['c_name']; ; 
-		    $this->view->render('dashboard/content/blog');
-	        return;
-	    }
-	    if ($id == 'live' ) { 
-	        if (empty($videouri)) {
-	            $this->view->products = $this->model->getproducts();
-	            $this->view->services = $this->model->getservicesaccounts();
-    		    $this->view->title = 'Go Live | '.$this->_company()['c_name']; ; 
-    		    $this->view->render('dashboard/content/create-live');
-    		    return;
-	        }
-	        
-		    $this->view->videodata = $this->model->videodata($videouri);  
-		    $this->view->attachment = $this->model->vidattachment( $this->view->videodata );  
-		    $this->view->title = "[{$this->view->videodata['v_channel']}] - {$this->view->videodata['v_title']} | {$this->_company()['c_name']}" ; 
-    		$this->view->render('dashboard/content/live');
-		    return;
-	    }
-	    if ($id == 'edit' ) { 
-	        $this->view->data = $this->model->getvideos($_GET['vid'] ?? '');
-		    $this->view->title = 'Edit Video | '.$this->_company()['c_name']; ; 
-		    $this->view->render('dashboard/content/edit');
-		    return;
-	    }
-	    
-	    $this->view->data = $this->model->getvideos();
-	    $this->view->title = ' New Listing | '.$this->_company()['c_name']; ; 
-	    $this->view->render('dashboard/content/videos');
-	    
+	
+	public function content($id = '', $blog_id = '') {
+		Auth::handleLogin(); 
+	    $this->view->categories = parent::categories();
+
+		if ($id == 'new') {
+			$this->view->data = $this->model->getblog($blog_id);
+			$this->view->title = 'New Content | '.$this->_company()['c_name']; 
+			$this->view->render('dashboard/content/new');
+			return;
+		}
+		if ($id == 'categories') {
+			
+			$this->view->title = 'New Category | '.$this->_company()['c_name']; 
+			$this->view->render('dashboard/content/categories');
+			return;
+		}
+		
+		$this->view->data = $this->model->getblog();
+		$this->view->title = 'My Posts | '.$this->_company()['c_name']; ; 
+		$this->view->render('dashboard/content/blog');
+		return;
+	   
+	   
 	}
 	public function bids($id = 'earnings', $url = '') {
 		Auth::handleLogin();

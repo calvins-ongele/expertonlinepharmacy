@@ -79,6 +79,17 @@ class Dashboard_Model extends Model
 	    return $this->_get('orders left join products on p_url = order_product_url left join users on p_user_fk=user_ID', 'order_buyer_fk, order_status',
 	    [Session::get('userid'),$status])[1];
 	}
+
+	public function getblog($id = "") {
+		if (!empty($id))
+			return $this->_get("blog", "slug", [$id], 0)[1];
+
+
+		return[
+			'blog'=> $this->_get("blog", "", [], 1, "order by id desc {$this->pagination()} ")[1],
+			'count'=>$this->_get("blog", "", [] )[0]
+		];
+	}
 	 
 	
 	  

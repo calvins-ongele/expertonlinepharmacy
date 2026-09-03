@@ -16,7 +16,7 @@
                 <div class="hero-placeholder__body" data-astro-cid-d257t26o>
                     <div class="hero-placeholder__content" data-astro-cid-d257t26o>
                         <p class="hero-placeholder__eyebrow" data-astro-cid-d257t26o><?= $this->_company['c_name'] ?> - Clinician-Led Online Care</p>
-                        <h1 class="hero-placeholder__headline" data-astro-cid-d257t26o> <span data-astro-cid-d257t26o>Expert Healthcare built around</span> <span class="hero-placeholder__accent" data-astro-cid-d257t26o>you</span> </h1> <a class="hero-placeholder__trustpilot" href="https://uk.trustpilot.com/review/simpleonlinepharmacy.co.uk" target="_blank" rel="noopener noreferrer" data-astro-cid-d257t26o> <svg class="hero-placeholder__trustpilot-logo" viewBox="0 0 126 31" aria-label="Trustpilot" data-astro-cid-d257t26o>
+                        <h1 class="hero-placeholder__headline" data-astro-cid-d257t26o> <span data-astro-cid-d257t26o>Expert Healthcare built around</span> <span class="hero-placeholder__accent" data-astro-cid-d257t26o>you</span> </h1> <a class="hero-placeholder__trustpilot" href="https://uk.trustpilot.com/review/#" target="_blank" rel="noopener noreferrer" data-astro-cid-d257t26o> <svg class="hero-placeholder__trustpilot-logo" viewBox="0 0 126 31" aria-label="Trustpilot" data-astro-cid-d257t26o>
                                 <path d="M33.3 10.7h-8.9l-2.7-8.5L19 10.7h-8.9l7.2 5.2-2.7 8.5 7.2-5.2 7.2 5.2-2.7-8.5 7.2-5.2z" fill="#00b67a" data-astro-cid-d257t26o></path>
                                 <path d="M26.4 18.2l-.6-1.9-6 4.4 6.6-2.5z" fill="#005128" data-astro-cid-d257t26o></path> <text x="40" y="21" fill="#191919" font-family="system-ui, sans-serif" font-size="14" font-weight="600" data-astro-cid-d257t26o>Trustpilot</text>
                             </svg>
@@ -50,12 +50,12 @@
                 </div>
                 <div class="hero-placeholder__categories" data-astro-cid-d257t26o> 
                     
-                        <?php foreach($this->_categories as $row) { ?>
+                        <?php foreach($this->_categories as $row) { if ($row['category_type'] === 'blog') continue; ?>
                         <a class="category-card" href="/products/categories/<?= $row['slug'] ?>/" data-astro-cid-f3saawlv> 
                             <span class="category-card__image" data-astro-cid-f3saawlv>
                                 <picture data-astro-cid-f3saawlv="true">
                                     <source srcset="/<?= $row['image'] ?> 80w, /<?= $row['image'] ?> 160w, /<?= $row['image'] ?> 240w" type="image/webp" sizes="80px">
-                                    <source srcset="/<?= $row['image'] ?> 80w, /<?= $row['image'] ?> 160w, /<?= $row['image'] ?> 240w" type="image/webp" sizes="80px"> <img src="/<?= $row['image'] ?>" srcset="/<?= $row['image'] ?> 80w, /<?= $row['image'] ?> 160w, /<?= $row['image'] ?> 240w" alt sizes="80px" loading="lazy" decoding="async" data-astro-cid-f3saawlv="true" fetchpriority="auto" width="80" height="80">
+                                    <source srcset="/<?= $row['image'] ?> 80w, /<?= $row['image'] ?> 160w, /<?= $row['image'] ?> 240w" type="image/webp" sizes="80px"> <img src="/<?= $row['image'] ?>" srcset="/<?= $row['image'] ?> 80w, /<?= $row['image'] ?> 160w, /<?= $row['image'] ?> 240w" alt="<?= $this->_company['c_name'] ?>" sizes="80px" loading="lazy" decoding="async" data-astro-cid-f3saawlv="true" fetchpriority="auto" width="80" height="80">
                                 </picture>
                             </span> 
                             <span class="category-card__label" data-astro-cid-f3saawlv><?= $row['title'] ?></span> 
@@ -105,7 +105,7 @@
         <section class="trustbox" data-component="trust" data-astro-cid-mymfrz4o>
             <div class="trustbox__inner" data-astro-cid-mymfrz4o>
                 <p class="trustbox__title" data-astro-cid-mymfrz4o>Rated Excellent on Trustpilot with over 47,000+ reviews</p>
-                <div class="trustpilot-widget trustbox__widget" data-locale="en-GB" data-template-id="5406e65db0d04a09e042d5fc" data-businessunit-id="56105c750000ff000583fc89" data-style-height="28px" data-style-width="100%" data-theme="light" data-astro-cid-mymfrz4o> <a class="trustbox__fallback" href="https://uk.trustpilot.com/review/simpleonlinepharmacy.co.uk" target="_blank" rel="noopener noreferrer" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-label" data-astro-cid-mymfrz4o>Excellent</span> <span class="trustbox__fallback-stars" aria-hidden="true" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 100%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span><span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 100%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span><span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 100%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span><span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 100%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span><span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 59.999999999999964%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span> </span> <span class="trustbox__fallback-brand" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-brand-star" aria-hidden="true" data-astro-cid-mymfrz4o>★</span>
+                <div class="trustpilot-widget trustbox__widget" data-locale="en-GB" data-template-id="5406e65db0d04a09e042d5fc" data-businessunit-id="56105c750000ff000583fc89" data-style-height="28px" data-style-width="100%" data-theme="light" data-astro-cid-mymfrz4o> <a class="trustbox__fallback" href="https://uk.trustpilot.com/review/#" target="_blank" rel="noopener noreferrer" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-label" data-astro-cid-mymfrz4o>Excellent</span> <span class="trustbox__fallback-stars" aria-hidden="true" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 100%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span><span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 100%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span><span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 100%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span><span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 100%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span><span class="trustbox__fallback-star" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-star-fill" style="width: 59.999999999999964%" data-astro-cid-mymfrz4o>★</span> <span class="trustbox__fallback-star-base" data-astro-cid-mymfrz4o>★</span> </span> </span> <span class="trustbox__fallback-brand" data-astro-cid-mymfrz4o> <span class="trustbox__fallback-brand-star" aria-hidden="true" data-astro-cid-mymfrz4o>★</span>
                             Trustpilot
                         </span> <span class="trustbox__fallback-sr" data-astro-cid-mymfrz4o>4.6 out of 5 from 47,000+ reviews on Trustpilot</span> </a> </div>
             </div>
@@ -156,7 +156,7 @@
                         <p class="testimonial__name" data-astro-cid-iq3ewb3i> <span data-astro-cid-iq3ewb3i>Hannah</span> </p>
                     </div>
                 </div>
-                <div class="testimonial__media" data-astro-cid-iq3ewb3i> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/hannah.pG_YTlOx.jpg" alt="Hannah, <?= $this->_company['c_name'] ?> patient" loading="lazy" data-astro-cid-iq3ewb3i="true" decoding="async" fetchpriority="auto" width="400" height="480"> </div>
+                <div class="testimonial__media" data-astro-cid-iq3ewb3i> <img src="/public/assets/uploads/hannah.pG_YTlOx.jpg" alt="Hannah, <?= $this->_company['c_name'] ?> patient" loading="lazy" data-astro-cid-iq3ewb3i="true" decoding="async" fetchpriority="auto" width="400" height="480"> </div>
             </div>
         </section>
         <section class="how how--with-header" data-component="journey" data-astro-cid-yvrvggs3>
@@ -167,22 +167,22 @@
                 </div>
                 <div class="how__grid" data-astro-cid-yvrvggs3>
                     <div class="how__step" data-astro-cid-yvrvggs3>
-                        <div class="how__image" data-astro-cid-yvrvggs3> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/Step1.BdHCk6yw.png" alt="Online health assessment screnshot on a mobile device" loading="lazy" data-astro-cid-yvrvggs3="true" decoding="async" fetchpriority="auto" width="600" height="438"> </div>
+                        <div class="how__image" data-astro-cid-yvrvggs3> <img src="/public/assets/uploads/Step1.BdHCk6yw.png" alt="Online health assessment screnshot on a mobile device" loading="lazy" data-astro-cid-yvrvggs3="true" decoding="async" fetchpriority="auto" width="600" height="438"> </div>
                         <h3 data-astro-cid-yvrvggs3>Complete a simple assessment</h3>
                         <p data-astro-cid-yvrvggs3>Answer questions about your health, lifestyle, and goals.</p>
                     </div>
                     <div class="how__step" data-astro-cid-yvrvggs3>
-                        <div class="how__image" data-astro-cid-yvrvggs3> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/Step2.p3mqRZOL.png" alt="Clinician responding to a patient assessment" loading="lazy" data-astro-cid-yvrvggs3="true" decoding="async" fetchpriority="auto" width="600" height="438"> </div>
+                        <div class="how__image" data-astro-cid-yvrvggs3> <img src="/public/assets/uploads/Step2.p3mqRZOL.png" alt="Clinician responding to a patient assessment" loading="lazy" data-astro-cid-yvrvggs3="true" decoding="async" fetchpriority="auto" width="600" height="438"> </div>
                         <h3 data-astro-cid-yvrvggs3>Your assessment is reviewed by a clinician</h3>
                         <p data-astro-cid-yvrvggs3>A UK-registered prescriber carefully reviews your assessment to ensure treatment is safe and suitable for you.</p>
                     </div>
                     <div class="how__step" data-astro-cid-yvrvggs3>
-                        <div class="how__image" data-astro-cid-yvrvggs3> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/Step3.Bls1jPba.png" alt="Discreet pharmacy delivery box being prepared" loading="lazy" data-astro-cid-yvrvggs3="true" decoding="async" fetchpriority="auto" width="600" height="438"> </div>
+                        <div class="how__image" data-astro-cid-yvrvggs3> <img src="/public/assets/uploads/Step3.Bls1jPba.png" alt="Discreet pharmacy delivery box being prepared" loading="lazy" data-astro-cid-yvrvggs3="true" decoding="async" fetchpriority="auto" width="600" height="438"> </div>
                         <h3 data-astro-cid-yvrvggs3>Receive discreet delivery</h3>
                         <p data-astro-cid-yvrvggs3>Your medication is dispensed by our registered pharmacy and delivered directly to your door in plain packaging.</p>
                     </div>
                     <div class="how__step" data-astro-cid-yvrvggs3>
-                        <div class="how__image" data-astro-cid-yvrvggs3> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/Step4.C_NlJNbc.png" alt="View of the support portal dashboard" loading="lazy" data-astro-cid-yvrvggs3="true" decoding="async" fetchpriority="auto" width="600" height="438"> </div>
+                        <div class="how__image" data-astro-cid-yvrvggs3> <img src="/public/assets/uploads/Step4.C_NlJNbc.png" alt="View of the support portal dashboard" loading="lazy" data-astro-cid-yvrvggs3="true" decoding="async" fetchpriority="auto" width="600" height="438"> </div>
                         <h3 data-astro-cid-yvrvggs3>Stay supported</h3>
                         <p data-astro-cid-yvrvggs3>Schedule reviews with our specialist teams to monitor your progress and provide support throughout your journey.</p>
                     </div>
@@ -205,78 +205,78 @@
                 <div class="team__carousel" data-astro-cid-gkchqblh>
                     <div class="team__track" data-astro-cid-gkchqblh>
                         <div class="team__card" data-astro-cid-gkchqblh>
-                            <div class="team__image" data-astro-cid-gkchqblh> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/abdal.ByuVCfBO.webp" alt="Abdal Alvi" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="399"> </div>
+                            <div class="team__image" data-astro-cid-gkchqblh> <img src="/public/assets/uploads/abdal.ByuVCfBO.webp" alt="Abdal Alvi" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="399"> </div>
                             <div class="team__meta" data-astro-cid-gkchqblh>
-                                <p class="team__name" data-astro-cid-gkchqblh> <a href="https://www.simpleonlinepharmacy.co.uk/health-advice/abdal-alvi/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Abdal Alvi</a> </p>
+                                <p class="team__name" data-astro-cid-gkchqblh> <a href="#abdal-alvi/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Abdal Alvi</a> </p>
                                 <p data-astro-cid-gkchqblh>Chief Clinical Officer</p>
                                 <p class="team__credentials" data-astro-cid-gkchqblh>MPharm, IP, MRPharmS</p>
                                 <p class="team__registration" data-astro-cid-gkchqblh> <span data-astro-cid-gkchqblh>GPhC:</span> <a href="https://www.pharmacyregulation.org/registers/pharmacist/2059572" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh> 2059572 </a> </p>
                             </div>
                         </div>
                         <div class="team__card" data-astro-cid-gkchqblh>
-                            <div class="team__image" data-astro-cid-gkchqblh> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/laura.MQWH6w-n.webp" alt="Laura Perez" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="399"> </div>
+                            <div class="team__image" data-astro-cid-gkchqblh> <img src="/public/assets/uploads/laura.MQWH6w-n.webp" alt="Laura Perez" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="399"> </div>
                             <div class="team__meta" data-astro-cid-gkchqblh>
-                                <p class="team__name" data-astro-cid-gkchqblh> <a href="https://www.simpleonlinepharmacy.co.uk/health-advice/author/laura-perez/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Laura Perez</a> </p>
+                                <p class="team__name" data-astro-cid-gkchqblh> <a href="#/laura-perez/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Laura Perez</a> </p>
                                 <p data-astro-cid-gkchqblh>Clinical Nutrition Lead</p>
                                 <p class="team__credentials" data-astro-cid-gkchqblh>BSc (Hons), MSc, MSc</p>
                                 <p class="team__registration" data-astro-cid-gkchqblh> <span data-astro-cid-gkchqblh>BDA:</span> 24597 </p>
                             </div>
                         </div>
                         <div class="team__card" data-astro-cid-gkchqblh>
-                            <div class="team__image" data-astro-cid-gkchqblh> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/aamina.yHxdXdGx.webp" alt="Aamina Rafiq" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="399"> </div>
+                            <div class="team__image" data-astro-cid-gkchqblh> <img src="/public/assets/uploads/aamina.yHxdXdGx.webp" alt="Aamina Rafiq" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="399"> </div>
                             <div class="team__meta" data-astro-cid-gkchqblh>
-                                <p class="team__name" data-astro-cid-gkchqblh> <a href="https://www.simpleonlinepharmacy.co.uk/health-advice/aamina-rafiq/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Aamina Rafiq</a> </p>
+                                <p class="team__name" data-astro-cid-gkchqblh> <a href="#/aamina-rafiq/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Aamina Rafiq</a> </p>
                                 <p data-astro-cid-gkchqblh>Superintendent Pharmacist</p>
                                 <p class="team__credentials" data-astro-cid-gkchqblh>MPharm</p>
                                 <p class="team__registration" data-astro-cid-gkchqblh> <span data-astro-cid-gkchqblh>GPhC:</span> <a href="https://www.pharmacyregulation.org/registers/pharmacist/2216332" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh> 2216332 </a> </p>
                             </div>
                         </div>
                         <div class="team__card" data-astro-cid-gkchqblh>
-                            <div class="team__image" data-astro-cid-gkchqblh> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/ayisha.FTPgy5u7.webp" alt="Ayisha Mushtaq" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="753"> </div>
+                            <div class="team__image" data-astro-cid-gkchqblh> <img src="/public/assets/uploads/ayisha.FTPgy5u7.webp" alt="Ayisha Mushtaq" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="753"> </div>
                             <div class="team__meta" data-astro-cid-gkchqblh>
-                                <p class="team__name" data-astro-cid-gkchqblh> <a href="https://www.simpleonlinepharmacy.co.uk/health-advice/ayisha-mushtaq/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Ayisha Mushtaq</a> </p>
+                                <p class="team__name" data-astro-cid-gkchqblh> <a href="#/ayisha-mushtaq/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Ayisha Mushtaq</a> </p>
                                 <p data-astro-cid-gkchqblh>Registered Associate Nutritionist</p>
                                 <p class="team__credentials" data-astro-cid-gkchqblh>MSc Human Nutrition</p>
                                 <p class="team__registration" data-astro-cid-gkchqblh> <span data-astro-cid-gkchqblh>ANutr:</span> 39412 </p>
                             </div>
                         </div>
                         <div class="team__card" data-astro-cid-gkchqblh>
-                            <div class="team__image" data-astro-cid-gkchqblh> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/jane.DKHxsVIU.webp" alt="Jane O'Connell" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="752"> </div>
+                            <div class="team__image" data-astro-cid-gkchqblh> <img src="/public/assets/uploads/jane.DKHxsVIU.webp" alt="Jane O'Connell" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="752"> </div>
                             <div class="team__meta" data-astro-cid-gkchqblh>
                                 <p class="team__name" data-astro-cid-gkchqblh> Jane O&#39;Connell </p>
                                 <p data-astro-cid-gkchqblh>Dietitian</p>
                             </div>
                         </div>
                         <div class="team__card" data-astro-cid-gkchqblh>
-                            <div class="team__image" data-astro-cid-gkchqblh> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/rebekkah.Dv6M5lyb.webp" alt="Rebekah Parker" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="749"> </div>
+                            <div class="team__image" data-astro-cid-gkchqblh> <img src="/public/assets/uploads/rebekkah.Dv6M5lyb.webp" alt="Rebekah Parker" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="749"> </div>
                             <div class="team__meta" data-astro-cid-gkchqblh>
-                                <p class="team__name" data-astro-cid-gkchqblh> <a href="https://www.simpleonlinepharmacy.co.uk/health-advice/rebekah-parker/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Rebekah Parker</a> </p>
+                                <p class="team__name" data-astro-cid-gkchqblh> <a href="#rebekah-parker/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Rebekah Parker</a> </p>
                                 <p data-astro-cid-gkchqblh>Nurse Prescriber</p>
                                 <p class="team__credentials" data-astro-cid-gkchqblh>BSc, BSc (Hons), MSc</p>
                                 <p class="team__registration" data-astro-cid-gkchqblh> <span data-astro-cid-gkchqblh>NMC:</span> 02I1881S </p>
                             </div>
                         </div>
                         <div class="team__card" data-astro-cid-gkchqblh>
-                            <div class="team__image" data-astro-cid-gkchqblh> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/will.DYDYozBe.webp" alt="Richard Wood" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="749"> </div>
+                            <div class="team__image" data-astro-cid-gkchqblh> <img src="/public/assets/uploads/will.DYDYozBe.webp" alt="Richard Wood" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="749"> </div>
                             <div class="team__meta" data-astro-cid-gkchqblh>
-                                <p class="team__name" data-astro-cid-gkchqblh> <a href="https://www.simpleonlinepharmacy.co.uk/health-advice/richard-wood/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Richard Wood</a> </p>
+                                <p class="team__name" data-astro-cid-gkchqblh> <a href="#/richard-wood/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Richard Wood</a> </p>
                                 <p data-astro-cid-gkchqblh>Pharmacist / Clinical Specialist</p>
                                 <p class="team__registration" data-astro-cid-gkchqblh> <span data-astro-cid-gkchqblh>GPhC:</span> <a href="https://www.pharmacyregulation.org/registers/pharmacist/2078802" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh> 2078802 </a> </p>
                             </div>
                         </div>
                         <div class="team__card" data-astro-cid-gkchqblh>
-                            <div class="team__image" data-astro-cid-gkchqblh> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/sahira-transparent.BPKH43yh.webp" alt="Dr. Sahira Dar" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="600"> </div>
+                            <div class="team__image" data-astro-cid-gkchqblh> <img src="/public/assets/uploads/sahira-transparent.BPKH43yh.webp" alt="Dr. Sahira Dar" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="600"> </div>
                             <div class="team__meta" data-astro-cid-gkchqblh>
-                                <p class="team__name" data-astro-cid-gkchqblh> <a href="https://www.simpleonlinepharmacy.co.uk/health-advice/dr-sahira-dar/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Dr. Sahira Dar</a> </p>
+                                <p class="team__name" data-astro-cid-gkchqblh> <a href="#/dr-sahira-dar/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Dr. Sahira Dar</a> </p>
                                 <p data-astro-cid-gkchqblh>GP / Clinical Specialist</p>
                                 <p class="team__credentials" data-astro-cid-gkchqblh>Mb ChB 2000, University of Glasgow</p>
                                 <p class="team__registration" data-astro-cid-gkchqblh> <span data-astro-cid-gkchqblh>GMC:</span> <a href="https://www.gmc-uk.org/registrants/4705718" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh> 4705718 </a> </p>
                             </div>
                         </div>
                         <div class="team__card" data-astro-cid-gkchqblh>
-                            <div class="team__image" data-astro-cid-gkchqblh> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/zahra.BLpRKxu-.webp" alt="Zahra Qureshi" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="752"> </div>
+                            <div class="team__image" data-astro-cid-gkchqblh> <img src="/public/assets/uploads/zahra.BLpRKxu-.webp" alt="Zahra Qureshi" loading="lazy" draggable="false" data-astro-cid-gkchqblh="true" decoding="async" fetchpriority="auto" width="600" height="752"> </div>
                             <div class="team__meta" data-astro-cid-gkchqblh>
-                                <p class="team__name" data-astro-cid-gkchqblh> <a href="https://www.simpleonlinepharmacy.co.uk/health-advice/zahra-qureshi/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Zahra Qureshi</a> </p>
+                                <p class="team__name" data-astro-cid-gkchqblh> <a href="#/zahra-qureshi/" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh>Zahra Qureshi</a> </p>
                                 <p data-astro-cid-gkchqblh>Senior Pharmacist</p>
                                 <p class="team__registration" data-astro-cid-gkchqblh> <span data-astro-cid-gkchqblh>GPhC:</span> <a href="https://www.pharmacyregulation.org/registers/pharmacist/2216331" target="_blank" rel="noopener noreferrer" data-astro-cid-gkchqblh> 2216331 </a> </p>
                             </div>
@@ -364,7 +364,7 @@
                                 Trustpilot
                             </span>
                         </div>
-                    </div> <a href="https://www.trustpilot.com/review/simpleonlinepharmacy.co.uk" target="_blank" rel="noopener noreferrer" data-astro-cid-oprczqrd> See all reviews <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-oprczqrd>
+                    </div> <a href="https://www.trustpilot.com/review/#" target="_blank" rel="noopener noreferrer" data-astro-cid-oprczqrd> See all reviews <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-oprczqrd>
                             <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-oprczqrd></path>
                         </svg> </a>
                 </div>
@@ -588,14 +588,14 @@
                         </svg> </a>
                 </div>
                 <div class="mission__brands" data-astro-cid-vbjloogu>
-                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/novo-nordisk.DLSYqcG_.png" alt="Novo Nordisk" width="5000" height="3125" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
-                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/eli-lilly.BQyG9LT5.png" alt="Eli Lilly" width="1280" height="698" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
-                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/pfizer.BSxDT1s7.png" alt="Pfizer" width="2251" height="920" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
-                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/astrazeneca.cQpZeZ4-.png" alt="AstraZeneca" width="4902" height="1330" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
-                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/gsk.Dd_n9yP4.webp" alt="GSK" width="3840" height="2160" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
-                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/sanofi.DsKsofD-.avif" alt="Sanofi" width="384" height="216" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
-                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/novartis.Cvr_-jtj.webp" alt="Novartis" width="1780" height="325" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
-                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/roche.qmYRNeeD.png" alt="Roche" width="1280" height="666" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
+                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="/public/assets/uploads/novo-nordisk.DLSYqcG_.png" alt="Novo Nordisk" width="5000" height="3125" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
+                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="/public/assets/uploads/eli-lilly.BQyG9LT5.png" alt="Eli Lilly" width="1280" height="698" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
+                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="/public/assets/uploads/pfizer.BSxDT1s7.png" alt="Pfizer" width="2251" height="920" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
+                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="/public/assets/uploads/astrazeneca.cQpZeZ4-.png" alt="AstraZeneca" width="4902" height="1330" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
+                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="/public/assets/uploads/gsk.Dd_n9yP4.webp" alt="GSK" width="3840" height="2160" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
+                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="/public/assets/uploads/sanofi.DsKsofD-.avif" alt="Sanofi" width="384" height="216" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
+                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="/public/assets/uploads/novartis.Cvr_-jtj.webp" alt="Novartis" width="1780" height="325" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
+                    <div class="mission__brand" data-astro-cid-vbjloogu> <img src="/public/assets/uploads/roche.qmYRNeeD.png" alt="Roche" width="1280" height="666" loading="lazy" decoding="async" data-astro-cid-vbjloogu> </div>
                 </div>
             </div>
         </section>
@@ -645,7 +645,7 @@
                 <div class="ai-says__grid" data-nosnippet data-astro-cid-ydycdnvt>
                     <article class="ai-says__card" data-astro-cid-ydycdnvt>
                         <header data-astro-cid-ydycdnvt>
-                            <div class="ai-says__logo" data-astro-cid-ydycdnvt> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/chatgpt.DRpBxv7y.png" alt="ChatGPT" data-astro-cid-ydycdnvt="true" loading="lazy" decoding="async" fetchpriority="auto" width="36" height="36"> </div>
+                            <div class="ai-says__logo" data-astro-cid-ydycdnvt> <img src="/public/assets/uploads/chatgpt.png" alt="ChatGPT" data-astro-cid-ydycdnvt="true" loading="lazy" decoding="async" fetchpriority="auto" width="36" height="36"> </div>
                             <h3 data-astro-cid-ydycdnvt>ChatGPT</h3>
                         </header>
                         <blockquote data-astro-cid-ydycdnvt>
@@ -654,7 +654,7 @@
                     </article>
                     <article class="ai-says__card" data-astro-cid-ydycdnvt>
                         <header data-astro-cid-ydycdnvt>
-                            <div class="ai-says__logo" data-astro-cid-ydycdnvt> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/claude.Djxy_BeN.svg" alt="Claude" data-astro-cid-ydycdnvt="true" loading="lazy" decoding="async" fetchpriority="auto" width="36" height="36"> </div>
+                            <div class="ai-says__logo" data-astro-cid-ydycdnvt> <img src="/public/assets/uploads/claude.svg" alt="Claude" data-astro-cid-ydycdnvt="true" loading="lazy" decoding="async" fetchpriority="auto" width="36" height="36"> </div>
                             <h3 data-astro-cid-ydycdnvt>Claude</h3>
                         </header>
                         <blockquote data-astro-cid-ydycdnvt>
@@ -663,7 +663,7 @@
                     </article>
                     <article class="ai-says__card" data-astro-cid-ydycdnvt>
                         <header data-astro-cid-ydycdnvt>
-                            <div class="ai-says__logo" data-astro-cid-ydycdnvt> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/gemini.ajOb7iAl.png" alt="Gemini" data-astro-cid-ydycdnvt="true" loading="lazy" decoding="async" fetchpriority="auto" width="36" height="36"> </div>
+                            <div class="ai-says__logo" data-astro-cid-ydycdnvt> <img src="/public/assets/uploads/gemini.png" alt="Gemini" data-astro-cid-ydycdnvt="true" loading="lazy" decoding="async" fetchpriority="auto" width="36" height="36"> </div>
                             <h3 data-astro-cid-ydycdnvt>Gemini</h3>
                         </header>
                         <blockquote data-astro-cid-ydycdnvt>
@@ -672,7 +672,7 @@
                     </article>
                     <article class="ai-says__card" data-astro-cid-ydycdnvt>
                         <header data-astro-cid-ydycdnvt>
-                            <div class="ai-says__logo" data-astro-cid-ydycdnvt> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/perplexity.CLy9voU0.png" alt="Perplexity" data-astro-cid-ydycdnvt="true" loading="lazy" decoding="async" fetchpriority="auto" width="36" height="36"> </div>
+                            <div class="ai-says__logo" data-astro-cid-ydycdnvt> <img src="/public/assets/uploads/perplexity.png" alt="Perplexity" data-astro-cid-ydycdnvt="true" loading="lazy" decoding="async" fetchpriority="auto" width="36" height="36"> </div>
                             <h3 data-astro-cid-ydycdnvt>Perplexity</h3>
                         </header>
                         <blockquote data-astro-cid-ydycdnvt>
@@ -718,10 +718,10 @@
         <div class="reviewed__inner" data-astro-cid-plwpaone>
             <div class="reviewed__blocks" data-astro-cid-plwpaone>
                 <article class="reviewed__block" data-astro-cid-plwpaone>
-                    <div class="reviewed__avatar" data-astro-cid-plwpaone> <img src="https://assets.simpleonlinepharmacy.co.uk/_astro/aamina.yHxdXdGx.webp" alt="Aamina Rafiq, Superintendent Pharmacist at <?= $this->_company['c_name'] ?>" data-astro-cid-plwpaone="true" loading="lazy" decoding="async" fetchpriority="auto" width="192" height="192" class="reviewed__avatar-image"> </div>
+                    <div class="reviewed__avatar" data-astro-cid-plwpaone> <img src="/public/assets/uploads/aamina.yHxdXdGx.webp" alt="Aamina Rafiq, Superintendent Pharmacist at <?= $this->_company['c_name'] ?>" data-astro-cid-plwpaone="true" loading="lazy" decoding="async" fetchpriority="auto" width="192" height="192" class="reviewed__avatar-image"> </div>
                     <div class="reviewed__content" data-astro-cid-plwpaone>
                         <p class="reviewed__eyebrow" data-astro-cid-plwpaone>Medically reviewed by</p>
-                        <p class="reviewed__name" data-astro-cid-plwpaone> <a href="https://www.simpleonlinepharmacy.co.uk/health-advice/aamina-rafiq/" target="_blank" rel="noopener noreferrer" data-astro-cid-plwpaone> Aamina Rafiq </a> </p>
+                        <p class="reviewed__name" data-astro-cid-plwpaone> <a href="#/aamina-rafiq/" target="_blank" rel="noopener noreferrer" data-astro-cid-plwpaone> Aamina Rafiq </a> </p>
                         <p class="reviewed__role" data-astro-cid-plwpaone> <span data-astro-cid-plwpaone>Superintendent Pharmacist</span> <span class="reviewed__separator" aria-hidden="true" data-astro-cid-plwpaone>|</span> <span data-astro-cid-plwpaone>GPhC:</span> <a href="https://www.pharmacyregulation.org/registers/pharmacist/2216332" target="_blank" rel="noopener noreferrer nofollow" data-astro-cid-plwpaone> 2216332 </a> </p>
                         <p class="reviewed__intro" data-astro-cid-plwpaone>This page has been reviewed by our clinical team to ensure it is clear, accurate, and up to date.</p>
                     </div>

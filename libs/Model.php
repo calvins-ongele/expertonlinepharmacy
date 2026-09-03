@@ -40,8 +40,13 @@ class Model extends Database {
 			$where = $where;
 		} else $where = $this->_where($where, 'and', '', $del_rule);
 
+		$selectTable = "SELECT ";
+		if (substr($table, 0, 1) == '*') {
+			$selectTable = ltrim($table, '*');
+		} else $selectTable = "SELECT * FROM $table ";
+
 		$countvalues = count($values);
-		$sql = $countvalues == 0 ? "SELECT * FROM $table $orderby" : "SELECT * FROM $table WHERE $where $orderby";		
+		$sql = $countvalues == 0 ? "$selectTable $orderby" : "SELECT * FROM $table WHERE $where $orderby";		
 		//echo $sql; //echo '<br>'; //die;
 		$stmt = $this->connection()->prepare($sql);
 		$stmt->execute( $values );
@@ -171,36 +176,7 @@ class Model extends Database {
 		}
 		return $where1;
 	}
-	
-	/**
-	 * @return int user_ID
-	 * @param string user_url
-	 */
-	protected function _getId(string $url) {		
-		return $this->_get('users', 'user_url',[$url], false  )[1]['user_ID'];
-	}
-    
-	protected function _uniq_url($table, $columnurl) {
-
-		for ($i = 0; $i < 10000000000; $i++) {
-			$url = rand(101, 1009) . time();
-			if ($this->_get($table, $columnurl, [$url], true )[0] == 0) {
-				return $url;
-				break;
-			}
-		}
-	}
-	protected function _uniq_p_url($names) {
-		$url = $names;
-		for ($i = 0; $i < 10000000000; $i++) {
-			if ($i > 0) $url .= '-' . rand();
-			$url = rand(101, 100009) . time(); 
-			if ($this->_get('users', 'user_url', [$url], true )[0] == 0) {
-				return $url;
-				break;
-			}
-		}
-	}
+	   
 
     protected function _gettables() {
 		$sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA='{$this->dbName}'  ";
@@ -232,7 +208,19 @@ class Model extends Database {
         $this->_insert('logs', 'l_message, l_by, l_type, l_date', [$message, Session::get('userid'), $type, time() ]);
     }
     public function categories() {
-       return $this->_get('categories', '',[])[1]; 
+       $categs = $this->_get('categories', '',[])[1]; 
+	   $output = [];
+
+	   foreach($categs as $row) {
+		//$row['inner_content'] = [['title'=>'', 'slug'=>'']]; //sample
+		
+		$row['inner_content'] = ($row['category_type'] === 'blog')
+								? $this->_get('blog order by id desc limit 5')[1]
+								: $this->_get('products order by id desc limit 5')[1];
+	    $output[] = $row;
+	   }
+
+	   return $output;
     }
   
     public function _content() {
