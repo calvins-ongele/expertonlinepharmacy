@@ -6,7 +6,7 @@ class Login_Model extends Model
 	{
 		parent::__construct();
 	}
-	
+	 
 		//email verification
 	public function emailverify($email, $token) {
 	   

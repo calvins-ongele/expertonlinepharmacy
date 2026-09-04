@@ -3,15 +3,14 @@
 class Products extends Controller
 {
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
     }
 
-    public function index($url = '')
-    {
-        if (!empty($url)) { 
-            $this->SinglePrduct($url);
+    public function index($url = '', $urlaction = '') {
+        
+        if (!empty($url)) {  
+            $this->SinglePrduct($url, order:$urlaction === 'order');
             return;
         }
         $this->view->data = $this->model->getProducts($url);
@@ -19,9 +18,14 @@ class Products extends Controller
         $this->view->render('products/index');
     }
 
-    public function SinglePrduct(string $url)
+    public function SinglePrduct(string $url, $order = false)
     {
         $this->view->data = $this->model->getProducts($url);
+        if ($order) {
+            $this->view->title =   "Order {$this->view->data['title']} | " . $this->_company()['c_name'];
+            $this->view->render('products/order-product');
+            return;
+        }
         $this->view->title =   "View {$this->view->data['title']} | " . $this->_company()['c_name'];
         $this->view->render('products/view-product');
     }

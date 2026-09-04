@@ -29,19 +29,30 @@
                                         <th>Title</th>
                                         <th>Price</th>
                                         <th>Date</th>
-                                        <th>Customer&nbsp;has&nbsp;paid</th>
-                                        <th>Seller Paid</th>
+                                        <th>Status</th>
+                                        <th>Clear</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $i = 0; foreach($this->data as $row) { $i++; ?>
                                     <tr>
-                                        <td><?php echo $i ?></td>
-                                        <td><a href='/market/<?php echo $row['p_url'] ?>' style='color:black'><?php echo $row['p_title'] ?> <i class='fa fa-external-link-square-alt' ></i></a> </td>
-                                        <td><?php echo $row['order_paid_amount'] ?></td>
-                                        <td><?php echo date('m-d-Y', $row['order_date']) ?></td>
-                                        <td><?php echo $row['order_fully_paid'] ?></td>
-                                        <td><?php echo $row['order_seller_paid'] ?></td>
+                                        <td><?= $i ?></td>
+                                        <td><a href='/products/<?= $row['slug'] ?>' style='color:black'>
+                                            <?= $row['title'] ?> <i class='fa fa-external-link-square-alt' ></i></a> </td>
+
+                                        <td>
+                                            <?= $row['product_count'] ?> x
+                                            <?= $row['price'] ?> = 
+                                            <?= $row['price'] * $row['product_count'] ?>
+                                        </td>
+                                        <td><?= $row['order_created_at'] ?></td>
+                                        <td><?= $row['order_status'] ?></td>
+                                        <td>
+                                            <a href="#" rel="<?= $row['order_id'] ?>"
+                                            class="badge badge-success clear" >
+                                                Clear?
+                                            </a>
+                                        </td>
                                     </tr>
                                     <?php } ?>
                                 </tbody>
@@ -60,6 +71,30 @@
         
         
         <?php require DASHBOARD.'includes/footer.inc.php' ?>
+
+        <script>
+            $(function() {
+
+            $('.clear').click( async function(e) {
+                e.preventDefault();
+
+                const form = new FormData();
+                form.set('id', $(this).attr('rel') );
+                form.set('method', 'clear_order_past' );
+                form.set('csrf_token', '<?= CSRF::get() ?>' );
+                 
+                if (confirm("Are you sure?")) {
+                    const response = await fetch('/myapp/requests', {method:"POST", body:form});
+
+                    const result = await response.json(); 
+                    alert(result.msg);
+                    location.reload();
+                }
+
+            })
+               
+            })
+        </script>
         
     
     </main> 

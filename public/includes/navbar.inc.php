@@ -160,11 +160,16 @@
          <div class="header__actions" data-astro-cid-wimnwge2> <a class="header__support" href="/contact-us" data-astro-cid-wimnwge2>
                  Support
              </a>   
-                 <a class="header__icon header__icon--basket" href="/basket/" aria-label="Basket" data-header-basket-link data-astro-cid-wimnwge2> <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-wimnwge2>
+                 <!-- <a class="header__icon header__icon--basket" href="/basket/" aria-label="Basket" data-header-basket-link data-astro-cid-wimnwge2> 
+                    <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-wimnwge2>
                      <path d="M5 10h14l-1.6 8H6.6L5 10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" data-astro-cid-wimnwge2></path>
                      <path d="M8 10 12 5l4 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-wimnwge2></path>
                      <path d="M9 13v2.5M12 13v2.5M15 13v2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" data-astro-cid-wimnwge2></path>
-                 </svg> <span class="header__basket-count" data-header-basket-count hidden data-astro-cid-wimnwge2></span> </a> <button id="astronav-menu" aria-label="Toggle Menu"> <svg fill="currentColor" class="header__menu-toggle" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-astro-cid-wimnwge2="true">
+                 </svg> 
+                 <span class="header__basket-count" data-header-basket-count hidden data-astro-cid-wimnwge2></span> 
+                </a>  -->
+                 <button id="astronav-menu" aria-label="Toggle Menu"> 
+                    <svg fill="currentColor" class="header__menu-toggle" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-astro-cid-wimnwge2="true">
                      <title>Toggle Menu</title>
                      <path class="astronav-close-icon astronav-toggle hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"></path>
                      <path class="astronav-open-icon astronav-toggle" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"></path>

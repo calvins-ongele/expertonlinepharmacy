@@ -3,6 +3,30 @@
 
 <head>
     <?php require 'public/includes/header.inc.php' ?>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+     <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "About Us | UK Trusted Online Pharmacy",
+            "description": "Explore clinically-proven weight loss treatments including Mounjaro and Wegovy. Clinician-led service with discreet delivery.",
+            "url": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/",
+            "dateModified": "2026-01-26"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "About Us",
+                "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/"
+            }]
+        }
+    </script>
 </head>
 
 <body>
@@ -11,306 +35,90 @@
     <!-- ==================== Header End Here ==================== -->
     <main>
 
-     <!-- ==================== Breadcrumb Start Here ==================== -->
-        <section class="breadcrumb py-120 bg-img" data-background-image="<?= $this->_company['breadcrumb_bg'] ?>">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="breadcrumb__wrapper">
-                            <h2 class="breadcrumb__title"> About Us</h2>
-                            <ul class="breadcrumb__list">
-                                <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link"> <i
-                                            class="las la-home"></i> Home</a> </li>
-                                <li class="breadcrumb__item"><i class="fa-solid fa-angle-right"></i></li>
-                                <li class="breadcrumb__item"> <span class="breadcrumb__item-text"> About us </span>
-                                </li>
-                            </ul>
+        <!-- ==================== Breadcrumb Start Here ==================== -->
+
+
+        <!-----------------------about------------------------------->
+        <section class="container mt-2">
+            <div>
+                <div class="contentPageWrap aboutPageWrap">
+                    <div class="row">
+                        <div class="col-md-6 aboutLeft">
+                            <h1>About Us</h1>
+                            <div class="pageContent wysiwyg">
+                                <p><?= $this->_company['c_name'] ?> is a Registered UK Online Pharmacy. We have been online since 2012.&nbsp;We focus on customer care and our aim is make your online pharmacy experience as simple as possible.</p>
+                                <p>Our online doctor service&nbsp;offers treatments for a range of conditions, such as hair loss, erectile dysfunction, weight loss and more. You do not require a prescription, as our free online consultation allows us to assess suitability, before our doctor generates a prescription free of charge. This is then passed to the pharmacy team, who prepare and post your medication.</p>
+                                <h3>&nbsp;</h3>
+                                <h3>Complaints</h3>
+                                <p>We always try our best to give every patient a&nbsp;great online experience. &nbsp;If something does go wrong however, we will do our utmost to put things right. Should you wish to raise any complaint, dissatisfaction, worry or concern, please contact our complaints team by email with the subject &lsquo;complaints team.&rsquo;&nbsp; Provide as much detail as possible such as your name, order number and a description of the issue.&nbsp; We have an escalation process which allows for a non-biased, independent review of any issue.</p>
+                                <p>&nbsp;</p>
+                            </div><!-- .pageContent  -->
                         </div>
-                    </div>
-                </div>
+                   
+                        <div class="col-md-6 aboutRight">
+                            <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Company Information #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        
+       <div class="innerSection wysiwyg">
+            <p><?= $this->_company['c_name'] ?> is owned by the UK registered company:&nbsp;Simple Online Healthcare Limited (company no:&nbsp;&nbsp;SC498329)</p>
+            <p>Registered Office:</p>
+            <p><strong>Address:</strong><br /><?= $this->_company['c_address'] ?><br />Tel : <?= $this->_company['c_tel'] ?><br />Email : <a href="mailto:<?= $this->_company['c_email'] ?>"  ><?= $this->_company['c_email'] ?></a></p>
+            <p><strong>Pharmacy GPhC registration number:</strong><br /><a href="https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9011287" target="_blank">9011287</a></p>
+            <p><strong>Superintendent Pharmacist:</strong><br />Aamina Rafiq - GPhC number 2216332<br /><br /><strong>Responsible Pharmacist:</strong><br />Zahra Qureshi&nbsp;- GPhC number&nbsp;2216331</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Our Prescribers #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        
+      <div class="innerSection wysiwyg">
+                                <p>All of our prescribers are UK based and registered with the relevant regulatory body.</p>
+                                <p>Our doctors are <a href="https://www.gmc-uk.org/registration-and-licensing/the-medical-register">GMC</a> registered.<br />Our pharmacist prescribers are <a href="https://www.pharmacyregulation.org/registers/pharmacist">GPhC</a> registered.<br />Our nurse prescribers are <a href="https://www.nmc.org.uk/registration/search-the-register/">NMC</a> registered.</p>
+                                <p>&nbsp;</p>
+                                <p><span style="text-decoration: underline;">DOCTORS</span></p>
+                                <p>Aniqah Ilyas - 7670761&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />Awais Alvi - 4574497&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />Avi Sharma -&nbsp;6077543<br />Sahira Dar -&nbsp;4705718<br />Shoaib Moughal -&nbsp;4704762</p>
+                                <p>&nbsp;</p>
+                                <p><span style="text-decoration: underline;">PHARMACISTS</span></p>
+                                <p>Abdal Alvi -&nbsp;2059572 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />Abdullah Mistry -&nbsp;2078474<br />Ali Bashir - 2059852<br />Amal Osman -&nbsp;2205049<br />Ariana Leila Jahanfar -&nbsp;2231370<br />Craig Marsh -&nbsp;2070724<br />Danyal Ahmed -&nbsp;2222428<br />Daryoush Safavi -&nbsp;2208917<br />Lara Seymour -&nbsp;2219773<br />Leanne McAuley -&nbsp;2087307<br />Markie Dales -&nbsp;2213621<br />Nicola Hopewell -&nbsp;2222145<br />Rubina Ali -&nbsp;2221311<br />Sabeela Yasin -&nbsp;2085618<br />Sultana Khaliq -&nbsp;2080082<br />Syed Shah -&nbsp;2221087<br />Ubayd Ali -&nbsp;2219322<br />Zaynab Araim -&nbsp;2077623<br />Zeenah Araim -&nbsp;2077620</p>
+                                <p>&nbsp;</p>
+                                <p><span style="text-decoration: underline;">NURSES</span></p>
+                                <p>Andrea Nagy -&nbsp;14D0189C<br />Jacqueline Brennan -&nbsp;07I1293S<br />Jason Smart -&nbsp;12A1007E<br />Justine Riley -&nbsp;05I0249E<br />Katie Taylor -&nbsp;98D0056W<br />Kerry-Anne Mitchell -&nbsp;11A0128S<br />Louise Purves -&nbsp;00J0100S<br />Naomi Garcia -&nbsp;95D0788E<br />Rebekah Parker -&nbsp;02I1881S<br />Sarah Hales -&nbsp;13E1415E<br />Sonia White -&nbsp;07I1272S<br />Susannah Russell -&nbsp;09B0097S<br />Theresa Deveney -&nbsp;90E0488S<br />Vicky Simpson -&nbsp;00H0155S</p>
+                            </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+                         
+                           
+                          
+                            
+                        </div>
+                    </div><!-- .contentWrap -->
+                </div><!-- .contentPageWrap -->
             </div>
         </section>
 
-     <!-----------------------about------------------------------->
-    
-    <section class="container-fluid card"> 
-    <div class="containers"> 
-        <div class="row">
-                <div class="col-md-1">   </div>
-            <div class="col-md-10">       
-                <div class="card mt-3 mb-1 card-team" >
-                    <h3 class="alert-sm alert alert-primary text-center"> About Mizizi Classifieds</h3>                
-                    <div class=" ml-3 mr-2 " >
-                         
-<div id="js-stickers-wrapper" class="b-stickers-wrapper"></div>
-<div data-server-rendered="true" id="__nuxt">
-    <div id="__layout">
-        <div class="b-body-wrapper js-body-wrapper">
-            <div class="h-bg-jiji-body h-min-height-100p h-width-100p h-flex">
-                <div class="b-app__wrapper">
-                    <div class="b-app-header-wrapper">
-                        <div class="b-app-header b-app-header--active">
-                            <div class="container b-app-header__inner">
-                                <div class="b-app-header__inner_flex"><!----> <a href="/" aria-label="Home" class="h-dinline-flex h-pointer"><svg color="#fff" height="40px" width="44px" xmlns="http://www.w3.org/2000/svg" class="h-mr-3 icon sprite-icons">
-                                            <use href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-logo-jiji" xlink:href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-logo-jiji"></use>
-                                        </svg></a> <!----></div> <!---->
-                                <div class="b-app-header__title">
-                                    <div class="b-app-header__title-text">
-                                        Sell faster
-                                    </div>
-                                    <div class="b-app-header__title-text">
-                                        Buy smarter
-                                    </div>
-                                </div>
-                                <div class="b-app-header__user-bar">
-                                    <div class="h-mh-15">
-                                        <div class="b-app-header-profile__wrapper">
-                                            <div class="b-app-header-profile__inner"><!----><!----></div>
-                                        </div>
-                                    </div>
-                               
-                                </div> <!---->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="b-content-wrapper" style="background-color:white;">
-                        <div class="b-about-bg">
-                            <div>
-                                <div class="b-about-wrapper container">
-                                    <div class="b-about-section">
-                                        <div class="b-about-side">
-                                            <div class="b-about-header-wrapper">
-                                                <h2 class="b-about-header-title">
-                                                    Mizizi Classifieds is the best place to sell anything to real people.
-                                                </h2> <span class="b-about-span h-mt-30 h-mb-30">
-                                                    It is the biggest free online classified with an advanced security system.
-                                                    We provide a simple hassle-free solution to sell and buy almost anything.
-                                                </span> <span class="b-about-scroll-to-header">
-                                                    Table of contents
-                                                </span>
-                                                <div class="b-about-scroll-to">
-                                                    How to sell on  Mizizi Classifieds?
-                                                    <div class="b-about-scroll-to-icon"><svg color="#BDBDBD" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons">
-                                                            <use href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-bottom" xlink:href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-bottom"></use>
-                                                        </svg></div>
-                                                </div>
-                                                <div class="b-about-scroll-to">
-                                                    How to buy on  Mizizi Classifieds?
-                                                    <div class="b-about-scroll-to-icon"><svg color="#BDBDBD" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons">
-                                                            <use href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-bottom" xlink:href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-bottom"></use>
-                                                        </svg></div>
-                                                </div>
-                                                <div class="b-about-scroll-to">
-                                                    Safety
-                                                    <div class="b-about-scroll-to-icon"><svg color="#BDBDBD" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons">
-                                                            <use href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-bottom" xlink:href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-bottom"></use>
-                                                        </svg></div>
-                                                </div>
-                                                <div class="b-about-scroll-to">
-                                                    Sell like a pro!
-                                                    <div class="b-about-scroll-to-icon"><svg color="#BDBDBD" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons">
-                                                            <use href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-bottom" xlink:href="/_nuxt/2c6964b9a34a7dbd66aca77e616705d3.svg#i-bottom"></use>
-                                                        </svg></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="b-about-side"><img src="https://assets.jijistatic.com/static/img/about/svg/first.svg" alt="first"></div>
-                                    </div>
-                                    <div id="howToSell" class="b-about-section reverse">
-                                        <div class="b-about-side">
-                                            <h2 class="b-about-header-title">
-                                                How to sell on  Mizizi Classifieds?
-                                            </h2>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    1. <a href="/registration.html">
-                                                        Register
-                                                    </a></h3> <span>
-                                                    Register using your e-mail and phone number (or do it via Facebook or Google).
-                                                    Make sure you’re entering a correct phone number, so your clients could reach you!
-                                                </span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    2. Make photos of your item.
-                                                </h3> <span>
-                                                    Feel free to make a lot of photos using your smartphone.
-                                                    Make sure they show your item in the best light.
-                                                </span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    3. Press
-                                                    <a href="/add-free-ad.html">
-                                                        SELL
-                                                    </a>.
-                                                </h3> <span>
-                                                    Choose a proper category, upload your photos and write a clear title and full description of your item.
-                                                    Enter a fair price, select attributes and send your advert to review!
-                                                </span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    4. Answer the messages and calls from your clients!
-                                                </h3> <span>
-                                                    If everything is ok with your advert, it’ll be on  Mizizi Classifieds in a couple of hours after sending to moderation.
-                                                    We’ll send you a letter and notification when your advert goes live.
-                                                    Check your messages and be ready to earn money!
-                                                    <span>
-                                                        Do you want to sell like a pro? Check out our
-                                                        <a href="/sc/premium-services">
-                                                            Premium Services
-                                                        </a>.
-                                                    </span></span>
-                                            </div> 
-                                        </div>
-                                        <div class="b-about-side"><img src="https://assets.jijistatic.com/static/img/about/svg/second.svg" alt="second"></div>
-                                    </div>
-                                    <div id="howToBuy" class="b-about-section">
-                                        <div class="b-about-side">
-                                            <h2 class="b-about-header-title">
-                                                How to buy on  Mizizi Classifieds?
-                                            </h2>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    1. Search for the item.
-                                                </h3> <span>
-                                                    Find what you need using search panel and filters.
-                                                    We have over a million adverts, choose exactly what you are looking for.
-                                                </span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    2. Contact a seller.
-                                                </h3> <span>
-                                                    You may use chat with a seller on our platform or call them via phone.
-                                                    Discuss all the details, negotiate about the price.
-                                                </span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    3. Take your item or order a delivery.
-                                                </h3> <span>
-                                                    We check our sellers carefully, but it’s always better to check twice, right?
-                                                    Meet a seller in public place and be sure to pay only after collecting your item.
-                                                </span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    4. Leave your feedback about the seller.
-                                                </h3> <span>
-                                                    Feel free to tell us about your purchase.
-                                                    Your feedback will be published online on the seller’s page and will be very helpful for other buyers.
-                                                    Let’s build a safe and professional business community together!
-                                                </span>
-                                            </div>  
-                                        </div>
-                                        <div class="b-about-side"><img src="https://assets.jijistatic.com/static/img/about/svg/third.svg" alt="third"></div>
-                                    </div>
-                                    <div id="safety" class="b-about-section reverse">
-                                        <div class="b-about-side">
-                                            <h2 class="b-about-header-title">
-                                                Safety
-                                            </h2>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    1. General
-                                                </h3> <span>
-                                                    We are highly focused on the security and can solve any issues in short-terms.
-                                                    That’s why we ask you, kindly, to leave a review after purchasing.
-                                                    If you run into any problems with a seller, you can report us and  Mizizi Classifieds Team will check this seller as soon as possible.
-                                                </span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    2. Personal safety tips.
-                                                </h3> <span>
-                                                    - Do not pay in advance, even for the delivery <br>
-                                                    - Try to meet at a safe, public location <br>
-                                                    - Check the item BEFORE you buy it <br>
-                                                    - Pay only after collecting the item <br></span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    3. Secure payments.
-                                                </h3> <span>
-                                                     Mizizi Classifieds provides
-                                                    <a href="/sc/premium-services">
-                                                        Premium Services
-                                                    </a>
-                                                    for those who want to sell and earn more.
-                                                    We accept both online and offline payments for these services.
-                                                    We guarantee secure and reliable payments on  Mizizi Classifieds.
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="b-about-side"><img src="https://assets.jijistatic.com/static/img/about/svg/fourth.svg" alt="fourth"></div>
-                                    </div>
-                                    <div id="sellLikePro" class="b-about-section">
-                                        <div class="b-about-side">
-                                            <h2 class="b-about-header-title">
-                                                Sell like a pro!
-                                            </h2>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    1. Pay attention to the details.
-                                                </h3> <span>
-                                                    Make good photos of your goods, write clear and detailed description.
-                                                </span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    2. Answer quickly.
-                                                </h3> <span>
-                                                    Don’t make your buyer wait for your message for days.
-                                                    <span>
-                                                        Be online or get
-                                                        <a href="/sc/premium-services">
-                                                            SMS notifications
-                                                        </a> on your messages.
-                                                    </span></span>
-                                            </div>
-                                            <div class="b-about-list-element">
-                                                <h3 class="b-about-list-element-title">
-                                                    3. Use
-                                                    <a href="/sc/premium-services">
-                                                        Premium Services
-                                                    </a>
-                                                    to get 15x more customers!
-                                                </h3> <span>
-                                                    Your adverts will appear at the top of the page and you will sell faster!
-                                                    <a href="/sc/premium-services/how-it-works">
-                                                        How does it work?
-                                                    </a></span>
-                                            </div>  
-                                        </div>
-                                        <div class="b-about-side"><img src="https://assets.jijistatic.com/static/img/about/svg/fifth.svg" alt="fifth"></div>
-                                    </div>
-                                
-                                </div>
-                            </div>
-                        </div> <!----> <!---->
-                    </div>
-           
-                </div>
-                
-            </div>
-        
-        </div>
-    </div>
-</div>
 
-                        
-                    </div>                   
-                    </div>  
-                </div>
-                <div class="col-md-2">   </div>
-            </div>
-        </div>  
-        <span>Have any questions, worries, or concerns while shopping or using our services?</span>
-                <a href='/legal/faq' class='btn btn-block btn-primary'>Learn more about Frequently Asked Questions</a>
-    </section>
-        
+
     </main>
     <!-- ==================== Footer Start Here ==================== -->
     <?php require "public/includes/footer.inc.php" ?>

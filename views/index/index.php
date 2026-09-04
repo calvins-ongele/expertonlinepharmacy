@@ -3,6 +3,18 @@
 
 <head>
     <?php require 'public/includes/header.inc.php' ?>
+       <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/"
+            }]
+        }
+    </script>
 </head>
 
 <body data-page-type="landing" data-astro-cid-sckkx6r4>  
@@ -44,7 +56,7 @@
                                         </svg> </span> </div> <span class="hero-placeholder__trustpilot-score" data-astro-cid-d257t26o>4.6</span> <span class="hero-placeholder__trustpilot-count" data-astro-cid-d257t26o>47,000+ reviews</span>
                             </div>
                         </a>
-                        <div class="hero-placeholder__primary-cta" data-astro-cid-d257t26o> <a class="hero-placeholder__cta cta-button" href="/weight-loss/" data-astro-cid-d257t26o> Weight Loss Treatments <span aria-hidden="true" data-astro-cid-d257t26o>→</span> </a> </div>
+                        <div class="hero-placeholder__primary-cta" data-astro-cid-d257t26o> <a class="hero-placeholder__cta cta-button" href="/products/categories/erectile-dysfunction-treatments/" data-astro-cid-d257t26o> Weight Loss Treatments <span aria-hidden="true" data-astro-cid-d257t26o>→</span> </a> </div>
                         <p class="hero-placeholder__price-qualifier" data-astro-cid-d257t26o>Weight loss treatments with no long-term commitment.</p>
                     </div>
                 </div>

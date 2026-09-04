@@ -80,10 +80,7 @@ class MyApp_Model extends Model
 		// reset the password  
 		$this->_update('users', 'user_pass, user_status', 'user_email', [password_hash($_POST['pass1'], PASSWORD_DEFAULT), "Active", $email] );
 		
-		$link = '/login';
-		if (!empty($data[1]['origin'])) {
-		    $link = '/paybill';
-		}
+		$link = '/login'; 
 		echo $this->_ms(false, "Password reset succesful. You can <a href='$link'>login</a>!");
 		 
 
@@ -120,9 +117,7 @@ class MyApp_Model extends Model
     			Session::set('phone', $data['user_tel']); 
     			Session::set('myaff', $data['user_aff_code']); 
     			Session::set('url', $data['user_url']); 
-    			Session::set('name', $data['user_fname']  );
-				//Session::set('fname', ucfirst(explode(" ", $data['user_names'])[0]));
-			//	Session::set('staffcontract', $data['user_staff_contract']);
+    			Session::set('name', $data['user_fname']  ); 
 			$key = CustomFunctions::randchars(40);
 				Session::set('key', $key); 
 			$this->_update('users', 'user_key_web', 'user_email', [$key, $_POST['email'] ]);
@@ -867,7 +862,35 @@ class MyApp_Model extends Model
 		echo $this->_delete("blog", "id", [ $_POST['id'] ]);
 
 	}
+
+	public function submit_order() {
+		
+		if (!CSRF::isVerified($_POST['csrf_token'] ?? '')) {
+			echo $this->_ms(true, "Invalid CSRF token. Please refresh the page and try again.", '',403);
+			return;
+		}
+
+		$this->_insert('orders', "product_id, product_count, phone, location, email", [
+			htmlspecialchars($_POST['id']), htmlspecialchars($_POST['qty']), 
+			htmlspecialchars($_POST['phone']), htmlspecialchars($_POST['locationSpecific']),
+			htmlspecialchars($_POST['email'])
+		]);
+
+		$settings = $this->_company();
+		$body = "
+			<p>Hello,<br>You have a new order from {$_POST['phone']}, {$_POST['email']} </p>
+		";
+		$this->PhpMailerConstruct($settings['c_email'], "New Order", $body );
+
+		echo $this->_ms(0, "Order added successfully.");
+	}
         
+
+	public function clear_order_past() {
+		$this->_update('orders', 'order_status', 'id', ['completed', $_POST['id']]);
+		
+		echo $this->_ms(0, "Order completed successfully.");
+	}
          
 
 	

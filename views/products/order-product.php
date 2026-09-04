@@ -3,37 +3,36 @@
 
 <head>
     <?php require 'public/includes/header.inc.php'  ?>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    
     <?php
 
         $imageLink = "https://{$_SERVER['SERVER_NAME']}/{$this->data['image']}";
-        $sizes = @(getimagesize( $this->data['image'] ));
+        $sizes = @(getimagesize($this->data['image']));
         $canonical = "https://{$_SERVER['SERVER_NAME']}/products/{$this->data['slug']}";
-
-        
-    ?> 
+ 
+    ?>
     <meta property='author' content='<?= $this->_company['c_name'] ?>'>
     <meta name='description' content="<?= $this->data['overview'] ?>">
     <meta property='og:description' content="<?= $this->data['overview'] ?>">
     <meta property='og:image' content='<?= $imageLink ?>'>
-    <meta property='og:image:width' content="<?= $sizes[0]??0 ?>">
-    <meta property='og:image:height' content="<?= $sizes[1]??0 ?>">
+    <meta property='og:image:width' content="<?= $sizes[0] ?? 0 ?>">
+    <meta property='og:image:height' content="<?= $sizes[1] ?? 0 ?>">
     <meta property='og:title' content="<?= $this->title ?>">
     <meta property='og:site_name' content='<?= $this->_company['c_name'] ?>'>
     <meta property='og:price' content='KES <?= $this->data['price'] ?>'>
-    <meta property='og:url' content='<?=  $canonical ?>'>
-    <meta property='article:published_time' content='<?= $this->data['created_at'] ?>'> 
-    <link rel='canonical'   href='<?=  $canonical ?>'/>
+    <meta property='og:url' content='<?= $canonical ?>'>
+    <meta property='article:published_time' content='<?= $this->data['created_at'] ?>'>
+    <link rel='canonical' href='<?= $canonical ?>' />
     <meta property="og:type" content="Product" />
-       
+
 
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "<?= $this->title ?>",
-            "image": [ 
+            "image": [
                 "<?= $imageLink ?>"
             ],
             "description": "<?= $this->data['overview'] ?>",
@@ -47,7 +46,7 @@
                 "@type": "Review",
                 "reviewRating": {
                     "@type": "Rating",
-                    "ratingValue": "4.<?= rand(1,9) ?>",
+                    "ratingValue": "4.<?= rand(1, 9) ?>",
                     "bestRating": "5"
                 },
                 "author": {
@@ -72,7 +71,8 @@
                     "@type": "Organization",
                     "name": "<?= $this->_company['c_name'] ?>"
                 }
-            }
+            },
+            "sameAs": ["<?= $canonical ?>"]
         }
     </script>
 
@@ -8299,811 +8299,145 @@
     <?php require 'public/includes/navbar.inc.php' ?>
 
     <main class="wegovy-pill" data-astro-cid-pccemkry>
-        <section class="hero hero--member-journey" data-component="hero" data-subscription-pricing data-subscription-starter-strength="1.5mg" data-subscription-starter-price="99" data-hero-payg-default-price="129" data-subscription-discount-percentage="10" data-subscription-first-order-discount-percentage="23" data-subscription-price-overrides="{&#34;4mg&#34;:&#34;125&#34;,&#34;9mg&#34;:&#34;152&#34;,&#34;25mg&#34;:&#34;197&#34;}" data-member-journey-root data-member-journey-scope="product-hero" data-astro-cid-aukjhy6i>
-            <div class="hero__inner" data-astro-cid-aukjhy6i>
-                <div class="hero__breadcrumbs" data-astro-cid-aukjhy6i>
-                    <nav class="breadcrumbs" aria-label="Breadcrumb" data-astro-cid-aebblgj5>
-                        <ol class="breadcrumbs__list" data-astro-cid-aebblgj5>
-                            <li class="breadcrumbs__item" data-astro-cid-aebblgj5> <a href="/" class="breadcrumbs__link" data-astro-cid-aebblgj5>Home</a> <span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-aebblgj5>/</span> </li>
-                            <li class="breadcrumbs__item" data-astro-cid-aebblgj5> <a href="/products/categories/<?= $this->data['categ_slug'] ?>/" class="breadcrumbs__link" data-astro-cid-aebblgj5><?= $this->data['categ_title'] ?></a> <span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-aebblgj5>/</span> </li>
-                            <li class="breadcrumbs__item" data-astro-cid-aebblgj5> <span class="breadcrumbs__current" aria-current="page" data-astro-cid-aebblgj5><?= $this->data['categ_title'] ?></span> </li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="hero__content hero__content--top" data-astro-cid-aukjhy6i>
-                    <h1 class="hero__headline" data-hero-headline data-member-journey-headline="false" data-astro-cid-aukjhy6i> <?= $this->data['title'] ?> </h1>
-                    <p class="hero__subtitle" data-astro-cid-aukjhy6i> <?= $this->data['overview'] ?> </p> <a class="hero__trustpilot-inline" href="https://uk.trustpilot.com/review/simpleonlinepharmacy.co.uk" target="_blank" rel="noopener noreferrer" data-astro-cid-aukjhy6i> <svg class="hero__trustpilot-logo" viewBox="0 0 126 31" aria-label="Trustpilot" data-astro-cid-aukjhy6i>
-                            <path d="M33.3 10.7h-8.9l-2.7-8.5L19 10.7h-8.9l7.2 5.2-2.7 8.5 7.2-5.2 7.2 5.2-2.7-8.5 7.2-5.2z" fill="#00b67a" data-astro-cid-aukjhy6i></path>
-                            <path d="M26.4 18.2l-.6-1.9-6 4.4 6.6-2.5z" fill="#005128" data-astro-cid-aukjhy6i></path> <text x="40" y="21" fill="#191919" font-family="system-ui, sans-serif" font-size="14" font-weight="600" data-astro-cid-aukjhy6i>
-                                Trustpilot
-                            </text>
-                        </svg>
-                        <div class="hero__trustpilot-rating" data-astro-cid-aukjhy6i>
-                            <div class="hero__trustpilot-stars" role="img" aria-label="4.6 out of 5 stars" data-astro-cid-aukjhy6i> <span class="hero__trustpilot-star" data-astro-cid-aukjhy6i> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-bg" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-fill" style="clip-path: inset(0 0% 0 0)" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> </span><span class="hero__trustpilot-star" data-astro-cid-aukjhy6i> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-bg" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-fill" style="clip-path: inset(0 0% 0 0)" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> </span><span class="hero__trustpilot-star" data-astro-cid-aukjhy6i> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-bg" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-fill" style="clip-path: inset(0 0% 0 0)" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> </span><span class="hero__trustpilot-star" data-astro-cid-aukjhy6i> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-bg" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-fill" style="clip-path: inset(0 0% 0 0)" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> </span><span class="hero__trustpilot-star" data-astro-cid-aukjhy6i> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-bg" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> <svg viewBox="0 0 24 24" class="hero__trustpilot-star-fill" style="clip-path: inset(0 40.000000000000036% 0 0)" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                        <path d="M12 2l2.9 6.2 6.8.6-5.1 4.4 1.6 6.6L12 16.9 5.8 19.8 7.4 13.2 2.3 8.8l6.8-.6L12 2z" data-astro-cid-aukjhy6i></path>
-                                    </svg> </span> </div> <span class="hero__trustpilot-score" data-astro-cid-aukjhy6i>4.6</span> <span class="hero__trustpilot-count" data-astro-cid-aukjhy6i> 48,000+ reviews
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="hero__media" data-astro-cid-aukjhy6i>
-                    <div class="hero__media-visual" data-astro-cid-aukjhy6i>
-                        <div class="hero__image-wrapper" data-astro-cid-aukjhy6i> <img src="/<?= $this->data['image'] ?>" srcset="/<?= $this->data['image'] ?> 320w, /<?= $this->data['image'] ?> 480w, /<?= $this->data['image'] ?> 640w, /<?= $this->data['image'] ?> 800w" alt="Oral Wegovy tablet (semaglutide)" loading="eager" fetchpriority="high" sizes="(min-width: 1024px) 320px, (min-width: 640px) 420px, 82vw" data-astro-cid-aukjhy6i="true" decoding="async" width="640" height="640" class="hero__image"> </div>
-                    </div>
-                    <div class="hero__product-benefits" data-astro-cid-aukjhy6i>
-                        <!-- <ul class="hero__product-benefits-list" data-astro-cid-aukjhy6i>
-                            <li data-astro-cid-aukjhy6i> <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-aukjhy6i></path>
-                                </svg> <span data-astro-cid-aukjhy6i>Daily pill instead of weekly injection</span> </li>
-                            <li data-astro-cid-aukjhy6i> <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-aukjhy6i></path>
-                                </svg> <span data-astro-cid-aukjhy6i>Average weight loss reached around 17% after 64 weeks for people who stayed on treatment*</span> </li>
-                            <li data-astro-cid-aukjhy6i> <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-aukjhy6i></path>
-                                </svg> <span data-astro-cid-aukjhy6i>Wegovy Tablets Approved in the UK</span> </li>
-                        </ul>
-                        <p class="hero__product-benefits-note" data-astro-cid-aukjhy6i>*OASIS 4, 64-week study of adults with overweight or obesity using oral semaglutide 25mg once daily alongside lifestyle intervention. Rounded from the 16.6% trial-product estimate; individual results vary.</p> -->
-                    </div>
-                </div>
-                <div class="hero__content hero__content--bottom hero__content--member-journey" data-astro-cid-aukjhy6i>
-                    <div class="hero__doses-shell hero__doses-shell--reserved" data-astro-cid-aukjhy6i>
-                        <div class="hero__doses" data-hero-doses data-member-journey-anon data-astro-cid-aukjhy6i>
 
+        <section>
+            <div class="container">
 
-                        </div>
+                <div class='card m-3 p-4'>
 
-                    </div>
-                    <div class="hero__cta-shell hero__cta-shell--reserved" data-astro-cid-aukjhy6i>
-                        <div class="hero__cta" data-member-journey-anon data-astro-cid-aukjhy6i>
-                            <div class="hero__price" aria-live="polite" data-hero-price-block data-astro-cid-aukjhy6i>
-                                <div class="hero__payment-pricing" data-astro-cid-aukjhy6i>
+                    <form id='payforproduct'>
+                        <input type="hidden" name="csrf_token" value="<?= CSRF::get() ?>" />
+                        <input type="hidden" name="method" value="submit_order" />
+                        <input type='hidden' name='id' class='urll' value='<?= $this->data['id'] ?>'>
+                        <input type='hidden' name='url' class=' ' value='<?php echo $this->data['slug'] ?? '' ?>'>
+                        <input value='<?php echo $_COOKIE['ref'] ?? '' ?>' type='hidden' name='ref' class='form-control'>
+                        <div class='table-responsive'>
+                            <table class='table table-bordered'>
+                                <thead>
+                                    <tr>
+                                        <th>Product Pic</th>
+                                        <th>Title</th>
+                                        <th>Qty&nbsp;added</th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img style='height:60px;width:auto' src='<?= $imageLink ?>'></td>
+                                        <td><?= $this->data['title'] ?> </td>
+                                        <td><input name="qty" style="max-width:100px" type="number" class="form-control" value="1" /></td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex justify-content-between border-bottom mt-3">
+                                <h4>
+                                    <bold>Total</bold>
+                                </h4>
+                                <h4>
+                                    <bold class="totalPrice">KES <?= number_format($this->data['price'] ?? 0) ?></bold>
+                                </h4>
 
-                                    <div class="hero__payment-price-row" data-astro-cid-aukjhy6i> <span class="hero__payment-price-value" data-astro-cid-aukjhy6i> <span data-astro-cid-aukjhy6i>£</span> <span data-hero-price data-astro-cid-aukjhy6i><?= $this->data['price'] ?></span> </span> <span class="hero__payment-price-payg" data-hero-payment-payg-price-wrap aria-label="Pay As You Go price" data-astro-cid-aukjhy6i> <s data-astro-cid-aukjhy6i>£<span data-hero-payment-payg-price data-astro-cid-aukjhy6i><?= number_format($this->data['price'] * 123 / 100, 2) ?></span></s> </span> </div>
-                                    <div class="hero__payment-details" data-astro-cid-aukjhy6i> <span data-hero-payment-detail data-astro-cid-aukjhy6i> 23% first order discount, then 10% off eligible treatment prices. </span> </div>
-                                </div>
-                            </div> <a class="hero__cta-button cta-button" href="/products/<?= $this->data['slug'] ?>/order" data-astro-cid-aukjhy6i> <span data-astro-cid-aukjhy6i>Order <?= ucwords($this->data['title']) ?> Now</span> <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-aukjhy6i>
-                                    <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-aukjhy6i></path>
-                                </svg> </a>
-                        </div>
-
-                    </div>
-                    <div class="hero__product-extra" data-astro-cid-aukjhy6i>
-                        <div id="wegovy-pill-tool" class="wpt" data-wpt-root data-assessment-href="#" data-show-prompt="false" data-unlock-step="3" data-astro-cid-i7z4trlf>
-                            <div class="wpt-floating" data-tool-prompt hidden data-astro-cid-i7z4trlf>
-                                <div class="wpt-floating__card" data-astro-cid-i7z4trlf> <button class="wpt-floating__close" type="button" data-tool-prompt-close aria-label="Close Wegovy Pill guide prompt" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M18 6 6 18" />
-                                                <path d="m6 6 12 12" />
-                                            </svg></span> </button>
-                                    <div class="wpt-floating__heading" data-astro-cid-i7z4trlf> <svg class="wpt-floating__glyph" viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-i7z4trlf>
-                                            <path d="M12 0C13 8 8 11 0 12C8 13 11 16 12 24C13 16 16 13 24 12C16 11 13 8 12 0Z" data-astro-cid-i7z4trlf></path>
-                                        </svg>
-                                        <p class="wpt-floating__title" data-astro-cid-i7z4trlf>Is the Wegovy pill right for you?</p>
-                                    </div>
-                                    <p class="wpt-floating__sub" data-astro-cid-i7z4trlf>
-                                        Answer a few questions to learn whether Wegovy may be suitable for you.
-                                        No sign-up required.
-                                    </p> <button class="wpt-floating__button" type="button" data-tool-open data-tool-source="prompt" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf>Find out more</span> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M5 12h14" />
-                                                <path d="m13 6 6 6-6 6" />
-                                            </svg></span> </button>
-                                    <p class="wpt-floating__note" data-astro-cid-i7z4trlf> <span class="wpt-note-icon" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <circle cx="12" cy="12" r="10" />
-                                                <path d="M12 16v-4" />
-                                                <path d="M12 8h.01" />
-                                            </svg></span> <span data-astro-cid-i7z4trlf>Educational content only and not a substitute for medical advice,
-                                            diagnosis, or treatment.</span> </p>
-                                </div>
                             </div>
-                            <div class="wpt-scrim" data-tool-scrim hidden data-astro-cid-i7z4trlf>
-                                <aside class="wpt-dialog" role="dialog" aria-modal="true" aria-labelledby="wpt-dialog-title" tabindex="-1" data-tool-dialog data-astro-cid-i7z4trlf>
-                                    <header class="wpt-head" data-astro-cid-i7z4trlf>
-                                        <div class="wpt-head__top" data-astro-cid-i7z4trlf> <button class="wpt-mobile-back" type="button" data-tool-back aria-label="Go back" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M19 12H5" />
-                                                        <path d="m12 19-7-7 7-7" />
-                                                    </svg></span> </button>
-                                            <div class="wpt-brand" data-astro-cid-i7z4trlf> <span class="wpt-brand__mark" data-astro-cid-i7z4trlf>S</span>
-                                                <h2 id="wpt-dialog-title" data-astro-cid-i7z4trlf>Is the Wegovy Pill right for me?</h2>
-                                            </div> <button class="wpt-help" type="button" aria-label="Help" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf>?</span> </button> <button class="wpt-close" type="button" data-tool-close aria-label="Close tool" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M18 6 6 18" />
-                                                        <path d="m6 6 12 12" />
-                                                    </svg></span> </button>
-                                        </div>
-                                    </header>
-                                    <div class="wpt-progress" aria-hidden="true" data-astro-cid-i7z4trlf>
-                                        <div class="wpt-progress-meta" aria-live="polite" data-astro-cid-i7z4trlf> <span data-step-count data-astro-cid-i7z4trlf>1 of 6</span> </div> <span class="wpt-progress__seg" data-step-segment aria-label="You" data-astro-cid-i7z4trlf></span><span class="wpt-progress__seg" data-step-segment aria-label="How it works" data-astro-cid-i7z4trlf></span><span class="wpt-progress__seg" data-step-segment aria-label="Results" data-astro-cid-i7z4trlf></span><span class="wpt-progress__seg" data-step-segment aria-label="Side effects" data-astro-cid-i7z4trlf></span><span class="wpt-progress__seg" data-step-segment aria-label="How to take" data-astro-cid-i7z4trlf></span><span class="wpt-progress__seg" data-step-segment aria-label="Your summary" data-astro-cid-i7z4trlf></span>
-                                    </div>
-                                    <div class="wpt-body" data-tool-body data-astro-cid-i7z4trlf>
-                                        <section class="wpt-step" data-step-index="0" data-astro-cid-i7z4trlf>
-                                            <p class="wpt-step__eyebrow" data-astro-cid-i7z4trlf>Step 1 - You</p>
-                                            <h3 class="wpt-step__title" data-astro-cid-i7z4trlf>Where are you in your journey?</h3>
-                                            <p class="wpt-step__lead" data-astro-cid-i7z4trlf>
-                                                So we can tailor what we show you, and what to compare.
-                                            </p>
-                                            <div class="wpt-options" role="radiogroup" aria-label="Where are you in your journey?" data-astro-cid-i7z4trlf> <button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="journey" data-option-id="new" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M12 3c.8 4 2 5.2 6 6-.8.2-1.5.4-2.2.7" />
-                                                            <path d="M12 3c-.8 4-2 5.2-6 6 4 .8 5.2 2 6 6 .4-2 1-3.3 2-4.2" />
-                                                            <path d="M19 14c.4 2 1 2.6 3 3-2 .4-2.6 1-3 3-.4-2-1-2.6-3-3 2-.4 2.6-1 3-3Z" />
-                                                        </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>New to weight loss treatments</span> <span class="wpt-option__desc" data-astro-cid-i7z4trlf>I&#39;m just starting to look into my options</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="m20 6-11 11-5-5" />
-                                                        </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="journey" data-option-id="lapsed" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
-                                                            <path d="M3 3v5h5" />
-                                                        </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>I&#39;ve used weight loss treatment before, but stopped</span> <span class="wpt-option__desc" data-astro-cid-i7z4trlf>I&#39;m picking things back up after a break</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="m20 6-11 11-5-5" />
-                                                        </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="journey" data-option-id="injecting" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="m18 2 4 4" />
-                                                            <path d="m17 7 3-3" />
-                                                            <path d="M19 9 8.7 19.3a2.4 2.4 0 0 1-3.4 0l-.6-.6a2.4 2.4 0 0 1 0-3.4L15 5" />
-                                                            <path d="m9 13 3 3" />
-                                                            <path d="m5 19-3 3" />
-                                                        </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>Currently using a weight loss injection</span> <span class="wpt-option__desc" data-astro-cid-i7z4trlf>I&#39;m already on a treatment that&#39;s working for me</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="m20 6-11 11-5-5" />
-                                                        </svg></span> </button> </div>
-                                            <div class="wpt-followup" data-lapsed-followup hidden data-astro-cid-i7z4trlf>
-                                                <div class="wpt-followup__head" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"></path>
-                                                                <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"></path>
-                                                                <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path>
-                                                                <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
-                                                            </svg></svg></span> <span data-astro-cid-i7z4trlf>Welcome back</span> </div>
-                                                <p class="wpt-followup__sub" data-astro-cid-i7z4trlf>
-                                                    What made you stop last time? We'll keep this in mind.
-                                                </p>
-                                                <div class="wpt-options" role="radiogroup" aria-label="What made you stop last time?" data-astro-cid-i7z4trlf> <button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="stopReason" data-option-id="needles-stop" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <circle cx="12" cy="12" r="10" />
-                                                                <path d="m15 9-6 6" />
-                                                                <path d="m9 9 6 6" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>I didn&#39;t get on with injections or needles</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="stopReason" data-option-id="sideeffects-stop" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M22 12h-4l-3 8-6-16-3 8H2" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>The side effects were too much</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="stopReason" data-option-id="results-stop" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m3 7 6 6 4-4 8 8" />
-                                                                <path d="M21 10v7h-7" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>I wasn&#39;t seeing the results I hoped for</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="stopReason" data-option-id="cost-stop" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2" />
-                                                                <path d="M16 12h5v5h-5a2.5 2.5 0 0 1 0-5Z" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>It became too expensive</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="stopReason" data-option-id="life-stop" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7" />
-                                                                <path d="M16 2v4" />
-                                                                <path d="M8 2v4" />
-                                                                <path d="M3 10h18" />
-                                                                <circle cx="18" cy="18" r="3" />
-                                                                <path d="M18 16.5V18l1 1" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>Life got busy - it didn&#39;t fit my routine</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button> </div>
-                                            </div>
-                                        </section>
-                                        <section class="wpt-step" data-step-index="1" hidden data-astro-cid-i7z4trlf>
-                                            <p class="wpt-step__eyebrow" data-astro-cid-i7z4trlf>Step 2 - How it works</p>
-                                            <h3 class="wpt-step__title" data-astro-cid-i7z4trlf>How the Wegovy Pill works</h3>
-                                            <p class="wpt-step__lead" data-astro-cid-i7z4trlf>
-                                                Same active ingredient as the injection, taken as a daily pill with
-                                                no needles.
-                                            </p>
-                                            <div class="wpt-points" data-astro-cid-i7z4trlf>
-                                                <article class="wpt-point" data-astro-cid-i7z4trlf> <span class="wpt-point__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="m10.5 20.5 10-10a5 5 0 0 0-7-7l-10 10a5 5 0 0 0 7 7Z" />
-                                                            <path d="m8.5 8.5 7 7" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>The same medicine</h4>
-                                                        <p data-astro-cid-i7z4trlf>It contains semaglutide — the same medicine as the Wegovy injection.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-point" data-astro-cid-i7z4trlf> <span class="wpt-point__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M11 20A7 7 0 0 1 4 13C4 6 11 4 20 4c0 9-2 16-9 16Z" />
-                                                            <path d="M4 20c4-6 8-8 16-16" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Gently reduces appetite</h4>
-                                                        <p data-astro-cid-i7z4trlf>It helps you feel full sooner and makes it easier to eat less, so the changes feel manageable.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-point" data-astro-cid-i7z4trlf> <span class="wpt-point__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>A protective coating</h4>
-                                                        <p data-astro-cid-i7z4trlf>A special coating protects the medicine in your stomach so your body can absorb it. That&#39;s why timing matters more than with the injection.</p>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <div class="wpt-note wpt-note--brand" data-branch-note="lapsed" hidden data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
-                                                        <path d="M3 3v5h5" />
-                                                    </svg></span>
-                                                <p data-astro-cid-i7z4trlf>A fresh, needle-free way to pick up where you left off.</p>
-                                            </div>
-                                            <div class="wpt-note" data-branch-note="injecting" hidden data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <circle cx="12" cy="12" r="10" />
-                                                        <path d="M12 16v-4" />
-                                                        <path d="M12 8h.01" />
-                                                    </svg></span>
-                                                <p data-astro-cid-i7z4trlf>
-                                                    If your injection is working, there is no need to change. This is
-                                                    here so you can compare routes.
-                                                </p>
-                                            </div>
-                                        </section>
-                                        <section class="wpt-step" data-step-index="2" hidden data-astro-cid-i7z4trlf>
-                                            <p class="wpt-step__eyebrow" data-astro-cid-i7z4trlf>Step 3 - Results</p>
-                                            <h3 class="wpt-step__title" data-astro-cid-i7z4trlf>What results can I expect?</h3>
-                                            <p class="wpt-step__lead" data-astro-cid-i7z4trlf>
-                                                Around 17% average weight loss — close to the ~20.7% from the Wegovy
-                                                injection.
-                                            </p>
-                                            <div class="wpt-chart" aria-label="Average weight loss comparison" data-astro-cid-i7z4trlf>
-                                                <div class="wpt-bar wpt-bar--highlight" style="--bar-width:70.83333333333334%" data-astro-cid-i7z4trlf>
-                                                    <div class="wpt-bar__top" data-astro-cid-i7z4trlf> <span class="wpt-bar__label" data-astro-cid-i7z4trlf> Wegovy Pill <span data-astro-cid-i7z4trlf>semaglutide, daily pill</span> </span> <span class="wpt-bar__value" data-astro-cid-i7z4trlf>~17%</span> </div>
-                                                    <div class="wpt-bar__track" data-astro-cid-i7z4trlf> <span class="wpt-bar__fill wpt-bar__fill--pill" data-astro-cid-i7z4trlf></span> </div>
-                                                </div>
-                                                <div class="wpt-bar" style="--bar-width:86.25%" data-astro-cid-i7z4trlf>
-                                                    <div class="wpt-bar__top" data-astro-cid-i7z4trlf> <span class="wpt-bar__label" data-astro-cid-i7z4trlf> Wegovy injection <span data-astro-cid-i7z4trlf>semaglutide, weekly</span> </span> <span class="wpt-bar__value" data-astro-cid-i7z4trlf>~20.7%</span> </div>
-                                                    <div class="wpt-bar__track" data-astro-cid-i7z4trlf> <span class="wpt-bar__fill wpt-bar__fill--winj" data-astro-cid-i7z4trlf></span> </div>
-                                                </div>
-                                                <div class="wpt-bar" style="--bar-width:93.75%" data-astro-cid-i7z4trlf>
-                                                    <div class="wpt-bar__top" data-astro-cid-i7z4trlf> <span class="wpt-bar__label" data-astro-cid-i7z4trlf> Mounjaro injection <span data-astro-cid-i7z4trlf>tirzepatide, weekly</span> </span> <span class="wpt-bar__value" data-astro-cid-i7z4trlf>~22.5%</span> </div>
-                                                    <div class="wpt-bar__track" data-astro-cid-i7z4trlf> <span class="wpt-bar__fill wpt-bar__fill--minj" data-astro-cid-i7z4trlf></span> </div>
-                                                </div>
-                                            </div>
-                                            <p class="wpt-footnote" data-astro-cid-i7z4trlf>
-                                                Average weight loss over time. Mounjaro (tirzepatide) is a different
-                                                medicine.
-                                            </p> <button class="wpt-compare-toggle" type="button" aria-expanded="false" aria-controls="wpt-comparison-panel" data-comparison-toggle data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M9 3v18" />
-                                                            <path d="M3 9h18" />
-                                                            <rect x="3" y="3" width="18" height="18" rx="2" />
-                                                        </svg></span> <span data-comparison-label data-astro-cid-i7z4trlf>Compare pill vs injections</span> </span> <span class="wpt-compare-toggle__chevron" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="m6 9 6 6 6-6" />
-                                                    </svg></span> </button>
-                                            <div id="wpt-comparison-panel" class="wpt-comparison-panel" data-comparison-panel aria-hidden="true" data-astro-cid-i7z4trlf>
-                                                <div class="wpt-comparison-scroll" data-astro-cid-i7z4trlf>
-                                                    <table class="wpt-table" data-astro-cid-i7z4trlf>
-                                                        <thead data-astro-cid-i7z4trlf>
-                                                            <tr data-astro-cid-i7z4trlf>
-                                                                <th data-astro-cid-i7z4trlf></th>
-                                                                <th data-astro-cid-i7z4trlf>Wegovy Pill</th>
-                                                                <th data-astro-cid-i7z4trlf>Wegovy injection</th>
-                                                                <th data-astro-cid-i7z4trlf>Mounjaro injection</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody data-astro-cid-i7z4trlf>
-                                                            <tr data-astro-cid-i7z4trlf>
-                                                                <th scope="row" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                            <path d="m10.5 20.5 10-10a5 5 0 0 0-7-7l-10 10a5 5 0 0 0 7 7Z" />
-                                                                            <path d="m8.5 8.5 7 7" />
-                                                                        </svg></span> What&#39;s in it </th>
-                                                                <td class="wpt-table__highlight" data-astro-cid-i7z4trlf>Semaglutide</td>
-                                                                <td data-astro-cid-i7z4trlf>Semaglutide</td>
-                                                                <td data-astro-cid-i7z4trlf>Tirzepatide</td>
-                                                            </tr>
-                                                            <tr data-astro-cid-i7z4trlf>
-                                                                <th scope="row" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                            <path d="M18 20V10" />
-                                                                            <path d="M12 20V4" />
-                                                                            <path d="M6 20v-6" />
-                                                                        </svg></span> Avg weight loss </th>
-                                                                <td class="wpt-table__highlight" data-astro-cid-i7z4trlf>~17%</td>
-                                                                <td data-astro-cid-i7z4trlf>~20.7%</td>
-                                                                <td data-astro-cid-i7z4trlf>~22.5%*</td>
-                                                            </tr>
-                                                            <tr data-astro-cid-i7z4trlf>
-                                                                <th scope="row" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                            <path d="m10.5 20.5 10-10a5 5 0 0 0-7-7l-10 10a5 5 0 0 0 7 7Z" />
-                                                                            <path d="m8.5 8.5 7 7" />
-                                                                        </svg></span> Format </th>
-                                                                <td class="wpt-table__highlight" data-astro-cid-i7z4trlf>Daily pill</td>
-                                                                <td data-astro-cid-i7z4trlf>Weekly injection</td>
-                                                                <td data-astro-cid-i7z4trlf>Weekly injection</td>
-                                                            </tr>
-                                                            <tr data-astro-cid-i7z4trlf>
-                                                                <th scope="row" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                            <circle cx="12" cy="12" r="10" />
-                                                                            <path d="M12 6v6l4 2" />
-                                                                        </svg></span> When and how </th>
-                                                                <td class="wpt-table__highlight" data-astro-cid-i7z4trlf>Once daily in the morning, with plain water, then wait 30 min</td>
-                                                                <td data-astro-cid-i7z4trlf>Any time, weekly</td>
-                                                                <td data-astro-cid-i7z4trlf>Any time, weekly</td>
-                                                            </tr>
-                                                            <tr data-astro-cid-i7z4trlf>
-                                                                <th scope="row" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                            <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 12 5a5.5 5.5 0 0 0-10 3.5C2 11.8 5.4 15.4 12 21c1.2-1 2.3-2 3.3-2.9" />
-                                                                            <path d="M3.2 12H7l2-3 3 6 2-4h3.8" />
-                                                                        </svg></span> Side effects </th>
-                                                                <td class="wpt-table__highlight" data-astro-cid-i7z4trlf>Nausea, vomiting, diarrhoea, constipation, abdominal discomfort</td>
-                                                                <td data-astro-cid-i7z4trlf>Same as the pill</td>
-                                                                <td data-astro-cid-i7z4trlf>Same as the pill</td>
-                                                            </tr>
-                                                            <tr data-astro-cid-i7z4trlf>
-                                                                <th scope="row" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                            <path d="m12 2 9 5-9 5-9-5 9-5Z" />
-                                                                            <path d="m3 12 9 5 9-5" />
-                                                                            <path d="m3 17 9 5 9-5" />
-                                                                        </svg></span> Other medicines? </th>
-                                                                <td class="wpt-table__highlight" data-astro-cid-i7z4trlf>Wait 30 min after</td>
-                                                                <td data-astro-cid-i7z4trlf>Can take together</td>
-                                                                <td data-astro-cid-i7z4trlf>Can take together</td>
-                                                            </tr>
-                                                            <tr data-astro-cid-i7z4trlf>
-                                                                <th scope="row" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                            <path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z" />
-                                                                        </svg></span> Storage </th>
-                                                                <td class="wpt-table__highlight" data-astro-cid-i7z4trlf>Room temperature</td>
-                                                                <td data-astro-cid-i7z4trlf>Refrigerated</td>
-                                                                <td data-astro-cid-i7z4trlf>Refrigerated</td>
-                                                            </tr>
-                                                            <tr data-astro-cid-i7z4trlf>
-                                                                <th scope="row" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                            <path d="m18 2 4 4" />
-                                                                            <path d="m17 7 3-3" />
-                                                                            <path d="M19 9 8.7 19.3a2.4 2.4 0 0 1-3.4 0l-.6-.6a2.4 2.4 0 0 1 0-3.4L15 5" />
-                                                                            <path d="m9 13 3 3" />
-                                                                            <path d="m5 19-3 3" />
-                                                                        </svg></span> Needles </th>
-                                                                <td class="wpt-table__highlight" data-astro-cid-i7z4trlf>No</td>
-                                                                <td data-astro-cid-i7z4trlf>Yes</td>
-                                                                <td data-astro-cid-i7z4trlf>Yes</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <p class="wpt-footnote" data-astro-cid-i7z4trlf>
-                                                    *Mounjaro (tirzepatide) is a different medicine.
-                                                </p>
-                                            </div>
-                                            <div class="wpt-note" data-branch-note="injecting" hidden data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <circle cx="12" cy="12" r="10" />
-                                                        <path d="M12 16v-4" />
-                                                        <path d="M12 8h.01" />
-                                                    </svg></span>
-                                                <p data-astro-cid-i7z4trlf>
-                                                    Shown so you can compare for yourself. There is no need to switch
-                                                    if your current treatment is working.
-                                                </p>
-                                            </div>
-                                        </section>
-                                        <section class="wpt-step" data-step-index="3" hidden data-astro-cid-i7z4trlf>
-                                            <p class="wpt-step__eyebrow" data-astro-cid-i7z4trlf>Step 4 - Side effects</p>
-                                            <h3 class="wpt-step__title" data-astro-cid-i7z4trlf>Being honest about side effects</h3>
-                                            <p class="wpt-step__lead" data-astro-cid-i7z4trlf>
-                                                Because it's the same medicine as the injection, the side effects
-                                                are much the same.
-                                            </p>
-                                            <div class="wpt-chips" data-astro-cid-i7z4trlf> <span class="wpt-chip" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf></span> Nausea </span><span class="wpt-chip" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf></span> Vomiting </span><span class="wpt-chip" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf></span> Diarrhoea </span><span class="wpt-chip" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf></span> Constipation </span><span class="wpt-chip" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf></span> Abdominal discomfort </span> </div>
-                                            <p class="wpt-footnote" data-astro-cid-i7z4trlf>
-                                                Usually mild, and most likely when your dose is going up.
-                                            </p>
-                                            <div class="wpt-reassure" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 12 5a5.5 5.5 0 0 0-10 3.5C2 11.8 5.4 15.4 12 21c1.2-1 2.3-2 3.3-2.9" />
-                                                        <path d="M14 16h2l2 2 3-3" />
-                                                        <path d="m17 15 1 1" />
-                                                    </svg></span>
-                                                <p data-astro-cid-i7z4trlf>
-                                                    Most effects are mild, show up early, and settle as your body gets
-                                                    used to the medicine. If they're troubling you, there's no rush to
-                                                    move up — you can stay on your current dose for longer. Our care
-                                                    team is with you the whole way, and medical help is there if
-                                                    anything feels more serious.
-                                                </p>
-                                            </div>
-                                            <div class="wpt-tips" data-astro-cid-i7z4trlf>
-                                                <div class="wpt-tips__head" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M15 14c.2-1 .9-1.7 1.5-2.5A6 6 0 1 0 6.5 12c.7.8 1.3 1.5 1.5 2.5" />
-                                                            <path d="M9 18h6" />
-                                                            <path d="M10 22h4" />
-                                                            <path d="M10 18v-2h4v2" />
-                                                        </svg></span>
-                                                    <h4 data-astro-cid-i7z4trlf>Simple tips that may help</h4>
-                                                </div>
-                                                <ul data-astro-cid-i7z4trlf>
-                                                    <li data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M3 2v7a3 3 0 0 0 6 0V2" />
-                                                                <path d="M6 2v20" />
-                                                                <path d="M21 15V2a5 5 0 0 0-5 5v6h5Z" />
-                                                                <path d="M21 22v-7" />
-                                                            </svg></span> Eat smaller, more frequent meals and stop when you&#39;re full. </li>
-                                                    <li data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M3 11h18" />
-                                                                <path d="M5 11a7 7 0 0 0 14 0" />
-                                                                <path d="M8 11V7" />
-                                                                <path d="M12 11V5" />
-                                                                <path d="M16 11V7" />
-                                                            </svg></span> Choose plain, bland foods when you feel queasy. </li>
-                                                    <li data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M15.2 22H8.8L7 3h10l-1.8 19Z" />
-                                                                <path d="M7.6 8h8.8" />
-                                                            </svg></span> Sip water through the day to stay hydrated. </li>
-                                                    <li data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M8.5 14.5A4.5 4.5 0 0 0 12 22a4.5 4.5 0 0 0 4.5-7.5C14.5 12.5 14 10 14 7c-2 1.5-3 3.5-3 6-1-1-1.5-2.5-1.5-4.5C7 10 6 12 8.5 14.5Z" />
-                                                            </svg></span> Go easy on greasy, fried, very sweet or spicy foods. </li>
-                                                    <li data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M2 22 16 8" />
-                                                                <path d="M3 12c5 0 8-3 8-8" />
-                                                                <path d="M7 16c5 0 8-3 8-8" />
-                                                                <path d="M11 20c5 0 8-3 8-8" />
-                                                            </svg></span> Eat more high-fibre foods and keep moving to help with constipation. </li>
-                                                    <li data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m3 17 6-6 4 4 8-8" />
-                                                                <path d="M14 7h7v7" />
-                                                            </svg></span> Side effects are often strongest just after a dose increase and may ease as you settle in. </li>
-                                                </ul>
-                                            </div>
-                                        </section>
-                                        <section class="wpt-step wpt-step--take" data-step-index="4" hidden data-astro-cid-i7z4trlf>
-                                            <p class="wpt-step__eyebrow" data-astro-cid-i7z4trlf>Step 5 - How to take</p>
-                                            <h3 class="wpt-step__title" data-astro-cid-i7z4trlf>How and when to take it</h3>
-                                            <div class="wpt-points wpt-points--take" data-astro-cid-i7z4trlf>
-                                                <article class="wpt-point" data-astro-cid-i7z4trlf> <span class="wpt-point__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M12.5 2.7a7 7 0 1 0 8.8 8.8A6 6 0 1 1 12.5 2.7Z" />
-                                                            <path d="M7 3v4" />
-                                                            <path d="M5 5h4" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>After an 8-hour fast</h4>
-                                                        <p data-astro-cid-i7z4trlf>
-                                                            Take it on an empty stomach after at least 8 hours without
-                                                            food — before any food, drink or other medicines. For most
-                                                            people that means first thing in the morning, but if you work
-                                                            shifts or nights, it's whenever you wake after your longest
-                                                            fast.
-                                                        </p>
-                                                        <p class="wpt-point__note" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                    <circle cx="12" cy="12" r="10" />
-                                                                    <path d="M12 16v-4" />
-                                                                    <path d="M12 8h.01" />
-                                                                </svg></span> <span data-astro-cid-i7z4trlf>
-                                                                Oral semaglutide is designed for an empty stomach — this
-                                                                gives the tablet the best chance to absorb.
-                                                            </span> </p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-point" data-astro-cid-i7z4trlf> <span class="wpt-point__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M15.2 22H8.8L7 3h10l-1.8 19Z" />
-                                                            <path d="M7.6 8h8.8" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Up to 120ml of plain water</h4>
-                                                        <p data-astro-cid-i7z4trlf>
-                                                            Swallow it with up to 120ml (about half a glass) of plain
-                                                            water — water only, nothing else.
-                                                        </p>
-                                                        <p class="wpt-point__note" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                    <circle cx="12" cy="12" r="10" />
-                                                                    <path d="M12 16v-4" />
-                                                                    <path d="M12 8h.01" />
-                                                                </svg></span> <span data-astro-cid-i7z4trlf>
-                                                                Too much water, or drinks other than water, can reduce
-                                                                semaglutide absorption.
-                                                            </span> </p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-point" data-astro-cid-i7z4trlf> <span class="wpt-point__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <circle cx="12" cy="12" r="9" />
-                                                            <path d="m5.7 5.7 12.6 12.6" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Swallow it whole</h4>
-                                                        <p data-astro-cid-i7z4trlf>Don't break, crush or chew the pill.</p>
-                                                        <p class="wpt-point__note" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                    <circle cx="12" cy="12" r="10" />
-                                                                    <path d="M12 16v-4" />
-                                                                    <path d="M12 8h.01" />
-                                                                </svg></span> <span data-astro-cid-i7z4trlf>
-                                                                Doing so damages the SNAC coating, which is vital to help
-                                                                your body absorb the medicine.
-                                                            </span> </p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-point" data-astro-cid-i7z4trlf> <span class="wpt-point__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M10 2h4" />
-                                                            <path d="M12 14l3-3" />
-                                                            <circle cx="12" cy="14" r="8" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Wait at least 30 minutes</h4>
-                                                        <p data-astro-cid-i7z4trlf>
-                                                            Before eating, drinking anything else, or taking other
-                                                            medicines.
-                                                        </p>
-                                                        <p class="wpt-point__note" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                    <circle cx="12" cy="12" r="10" />
-                                                                    <path d="M12 16v-4" />
-                                                                    <path d="M12 8h.01" />
-                                                                </svg></span> <span data-astro-cid-i7z4trlf>
-                                                                Eating, drinking or taking other oral medicines sooner than
-                                                                30 minutes lowers semaglutide absorption.
-                                                            </span> </p>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <div class="wpt-missed" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M8 2v4" />
-                                                        <path d="M16 2v4" />
-                                                        <path d="M3 10h18" />
-                                                        <rect x="3" y="4" width="18" height="18" rx="2" />
-                                                        <path d="m10 14 4 4" />
-                                                        <path d="m14 14-4 4" />
-                                                    </svg></span>
-                                                <p data-astro-cid-i7z4trlf> <strong data-astro-cid-i7z4trlf>Missed a dose?</strong> Skip it and take your next scheduled
-                                                    dose as normal. A morning reminder can help.
-                                                </p>
-                                            </div>
-                                            <div class="wpt-followup wpt-followup--visible" data-astro-cid-i7z4trlf>
-                                                <div class="wpt-followup__head" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-.9L3 21l1.9-5.1a8.5 8.5 0 1 1 16.1-4.4Z" />
-                                                            <path d="M10 9a2 2 0 1 1 3.3 1.5c-.8.6-1.3 1-1.3 2" />
-                                                            <path d="M12 16h.01" />
-                                                        </svg></span> <span data-astro-cid-i7z4trlf>One last thing</span> </div>
-                                                <p class="wpt-followup__sub" data-astro-cid-i7z4trlf>
-                                                    What is your biggest question or concern?
-                                                </p>
-                                                <div class="wpt-options" role="radiogroup" aria-label="What is your biggest question or concern?" data-astro-cid-i7z4trlf> <button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="q2" data-option-id="needles" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-                                                                <path d="m9 12 2 2 4-4" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>I just want to avoid needles</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="q2" data-option-id="unsure-effective" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M18 20V10" />
-                                                                <path d="M12 20V4" />
-                                                                <path d="M6 20v-6" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>Will a pill really be as effective?</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="q2" data-option-id="sideeffects" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 12 5a5.5 5.5 0 0 0-10 3.5C2 11.8 5.4 15.4 12 21c1.2-1 2.3-2 3.3-2.9" />
-                                                                <path d="M3.2 12H7l2-3 3 6 2-4h3.8" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>I&#39;m worried about side effects</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="q2" data-option-id="lifestyle" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <circle cx="12" cy="12" r="10" />
-                                                                <path d="M12 6v6l4 2" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>I want something that fits my routine</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button><button class="wpt-option" type="button" role="radio" aria-checked="false" data-option-group="q2" data-option-id="cost" data-astro-cid-i7z4trlf> <span class="wpt-option__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2" />
-                                                                <path d="M16 12h5v5h-5a2.5 2.5 0 0 1 0-5Z" />
-                                                            </svg></span> <span class="wpt-option__copy" data-astro-cid-i7z4trlf> <span class="wpt-option__title" data-astro-cid-i7z4trlf>Cost and value matter most</span> </span> <span class="wpt-option__check" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                <path d="m20 6-11 11-5-5" />
-                                                            </svg></span> </button> </div>
-                                            </div>
-                                        </section>
-                                        <section class="wpt-step" data-step-index="5" hidden data-astro-cid-i7z4trlf>
-                                            <div class="wpt-summary-hero" data-summary-for="new" data-summary-tone="go" data-astro-cid-i7z4trlf>
-                                                <p data-astro-cid-i7z4trlf>Your summary</p>
-                                                <h3 data-astro-cid-i7z4trlf>A needle-free way to begin</h3> <span data-astro-cid-i7z4trlf>Here&#39;s what the Wegovy Pill could mean for you, based on what you told us.</span>
-                                            </div>
-                                            <div class="wpt-summary-hero" data-summary-for="lapsed" data-summary-tone="go" hidden data-astro-cid-i7z4trlf>
-                                                <p data-astro-cid-i7z4trlf>Your summary</p>
-                                                <h3 data-astro-cid-i7z4trlf>A fresh, needle-free way to begin again</h3> <span data-astro-cid-i7z4trlf>You&#39;ve done this before. Here&#39;s what&#39;s different this time.</span>
-                                            </div>
-                                            <div class="wpt-summary-hero" data-summary-for="injecting" data-summary-tone="soft" hidden data-astro-cid-i7z4trlf>
-                                                <p data-astro-cid-i7z4trlf>Your summary</p>
-                                                <h3 data-astro-cid-i7z4trlf>How the Wegovy Pill compares</h3> <span data-astro-cid-i7z4trlf>No pressure to switch — this is just so you can see how the pill stacks up.</span>
-                                            </div>
-                                            <div class="wpt-reasons" data-summary-reasons hidden data-astro-cid-i7z4trlf>
-                                                <article class="wpt-reason" data-reason-stop="needles-stop" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7" />
-                                                            <path d="M16 2v4" />
-                                                            <path d="M8 2v4" />
-                                                            <path d="M3 10h18" />
-                                                            <circle cx="18" cy="18" r="3" />
-                                                            <path d="M18 16.5V18l1 1" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Easy to keep up</h4>
-                                                        <p data-astro-cid-i7z4trlf>Life got busy last time. One daily morning pill — with a reminder — is easy to fit into your routine.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-reason" data-reason-stop="sideeffects-stop" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 12 5a5.5 5.5 0 0 0-10 3.5C2 11.8 5.4 15.4 12 21c1.2-1 2.3-2 3.3-2.9" />
-                                                            <path d="M3.2 12H7l2-3 3 6 2-4h3.8" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Side effects stay part of the decision</h4>
-                                                        <p data-astro-cid-i7z4trlf>Side effects can happen with GLP-1 medicines. This tool keeps them visible so you can make a more informed choice.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-reason" data-reason-stop="results-stop" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M18 20V10" />
-                                                            <path d="M12 20V4" />
-                                                            <path d="M6 20v-6" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Results are averages, not promises</h4>
-                                                        <p data-astro-cid-i7z4trlf>Trial results can help comparison, but individual results vary and suitability depends on clinical review.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-reason" data-reason-stop="cost-stop" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2" />
-                                                            <path d="M16 12h5v5h-5a2.5 2.5 0 0 1 0-5Z" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Pricing is still to be confirmed</h4>
-                                                        <p data-astro-cid-i7z4trlf>UK pricing for Wegovy pills has not been confirmed. Current assessed pathways show their own pricing before you choose.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-reason" data-reason-stop="life-stop" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7" />
-                                                            <path d="M16 2v4" />
-                                                            <path d="M8 2v4" />
-                                                            <path d="M3 10h18" />
-                                                            <circle cx="18" cy="18" r="3" />
-                                                            <path d="M18 16.5V18l1 1" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Routine matters</h4>
-                                                        <p data-astro-cid-i7z4trlf>A daily tablet has a different routine from a weekly injection. The right format still needs to fit your day safely.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-reason" data-reason-q2="needles" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-                                                            <path d="m9 12 2 2 4-4" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Needle-free, same medicine</h4>
-                                                        <p data-astro-cid-i7z4trlf>You wanted to avoid needles. The Wegovy Pill is the same medicine as the injection — just taken as a daily pill.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-reason" data-reason-q2="unsure-effective" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M18 20V10" />
-                                                            <path d="M12 20V4" />
-                                                            <path d="M6 20v-6" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Comparable effectiveness</h4>
-                                                        <p data-astro-cid-i7z4trlf>You asked whether a pill can really work. At ~17% average weight loss, it&#39;s close to the ~20.7% from the Wegovy injection.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-reason" data-reason-q2="sideeffects" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 12 5a5.5 5.5 0 0 0-10 3.5C2 11.8 5.4 15.4 12 21c1.2-1 2.3-2 3.3-2.9" />
-                                                            <path d="M3.2 12H7l2-3 3 6 2-4h3.8" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Mild, early, supported</h4>
-                                                        <p data-astro-cid-i7z4trlf>You were worried about side effects. They&#39;re usually mild, show up early, and settle as you go — with our care team alongside you.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-reason" data-reason-q2="lifestyle" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <circle cx="12" cy="12" r="10" />
-                                                            <path d="M12 6v6l4 2" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Fits your routine</h4>
-                                                        <p data-astro-cid-i7z4trlf>You wanted something that fits your day. It&#39;s one daily pill, stored at room temperature, and easy to travel with.</p>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-reason" data-reason-q2="cost" hidden data-astro-cid-i7z4trlf> <span class="wpt-reason__glyph" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2" />
-                                                            <path d="M16 12h5v5h-5a2.5 2.5 0 0 1 0-5Z" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <h4 data-astro-cid-i7z4trlf>Support included</h4>
-                                                        <p data-astro-cid-i7z4trlf>Value matters to you. Your care team&#39;s support is included throughout.</p>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <div class="wpt-note" data-summary-note="injecting" hidden data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <circle cx="12" cy="12" r="10" />
-                                                        <path d="M12 16v-4" />
-                                                        <path d="M12 8h.01" />
-                                                    </svg></span>
-                                                <p data-astro-cid-i7z4trlf> If your current injection is working for you, there is no need to change. Any future switch would need prescriber review. </p>
-                                            </div>
-                                            <h4 class="wpt-timeline-title" data-astro-cid-i7z4trlf>What to expect in the first months</h4>
-                                            <div class="wpt-timeline" data-astro-cid-i7z4trlf>
-                                                <article class="wpt-timeline__item" data-astro-cid-i7z4trlf> <span class="wpt-timeline__badge" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M12 2v8" />
-                                                            <path d="m4.9 10.9 1.4 1.4" />
-                                                            <path d="m19.1 10.9-1.4 1.4" />
-                                                            <path d="M2 18h20" />
-                                                            <path d="M7 18a5 5 0 0 1 10 0" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <p data-astro-cid-i7z4trlf>Step 1</p>
-                                                        <h5 data-astro-cid-i7z4trlf>Month 1 - starting dose</h5> <span data-astro-cid-i7z4trlf>A low dose is used first so your body can adjust. Side effects are often most likely early on.</span>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-timeline__item" data-astro-cid-i7z4trlf> <span class="wpt-timeline__badge" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="m3 17 6-6 4 4 8-8" />
-                                                            <path d="M14 7h7v7" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <p data-astro-cid-i7z4trlf>Step 2</p>
-                                                        <h5 data-astro-cid-i7z4trlf>Month 2 - stepping up</h5> <span data-astro-cid-i7z4trlf>The dose increases gradually if treatment is tolerated and the prescriber agrees it is appropriate.</span>
-                                                    </div>
-                                                </article>
-                                                <article class="wpt-timeline__item" data-astro-cid-i7z4trlf> <span class="wpt-timeline__badge" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path d="M4 22V4" />
-                                                            <path d="M4 4h11l-1 4 1 4H4" />
-                                                        </svg></span>
-                                                    <div data-astro-cid-i7z4trlf>
-                                                        <p data-astro-cid-i7z4trlf>Step 3</p>
-                                                        <h5 data-astro-cid-i7z4trlf>Month 3+ - settled dose review</h5> <span data-astro-cid-i7z4trlf>Your clinician reviews how you are doing and confirms the right ongoing plan for you.</span>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <div class="wpt-summary-context" aria-label="Additional summary context" data-astro-cid-i7z4trlf>
-                                                <p data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                            <circle cx="12" cy="12" r="10" />
-                                                            <path d="M12 16v-4" />
-                                                            <path d="M12 8h.01" />
-                                                        </svg></span>
-                                                    Your clinician sets and adjusts your exact dose after your assessment.
-                                                </p>
-                                            </div>
-                                        </section>
-                                    </div>
-                                    <div class="wpt-disclaimer" data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <circle cx="12" cy="12" r="10" />
-                                                <path d="M12 16v-4" />
-                                                <path d="M12 8h.01" />
-                                            </svg></span>
-                                        <p data-astro-cid-i7z4trlf>This tool provides educational information only. It does not constitute medical advice, a diagnosis, or a prescription.</p>
-                                    </div>
-                                    <footer class="wpt-footer" data-astro-cid-i7z4trlf>
-                                        <div class="wpt-toast" data-tool-unlock-toast hidden data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <rect x="3" y="11" width="18" height="11" rx="2" />
-                                                    <path d="M7 11V7a5 5 0 0 1 9.9-1" />
-                                                </svg></span> <span data-astro-cid-i7z4trlf>
-                                                You've seen the honest bit - the assessment is now open to you.
-                                            </span> </div>
-                                        <div class="wpt-footer__actions" data-astro-cid-i7z4trlf> <button class="wpt-action wpt-action--back" type="button" data-tool-back data-astro-cid-i7z4trlf> <span class="wpt-action__icon" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M19 12H5" />
-                                                        <path d="m12 19-7-7 7-7" />
-                                                    </svg></span> <span data-back-label data-astro-cid-i7z4trlf>Close</span> </button> <button class="wpt-action wpt-action--primary" type="button" data-tool-next data-astro-cid-i7z4trlf> <span data-astro-cid-i7z4trlf>Continue</span> <span class="wpt-action__icon" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M5 12h14" />
-                                                        <path d="m13 6 6 6-6 6" />
-                                                    </svg></span> </button> <a class="wpt-action wpt-action--jump" href="https://weight.simpleonlinepharmacy.co.uk/" data-tool-jump hidden data-astro-cid-i7z4trlf> <span data-jump-label data-astro-cid-i7z4trlf>Start assessment</span> <span class="wpt-action__icon" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M5 12h14" />
-                                                        <path d="m13 6 6 6-6 6" />
-                                                    </svg></span> </a> <a class="wpt-action wpt-action--primary" href="https://weight.simpleonlinepharmacy.co.uk/" data-tool-assessment hidden data-astro-cid-i7z4trlf> <span data-assessment-label data-astro-cid-i7z4trlf>Start assessment</span> <span class="wpt-action__icon" data-astro-cid-i7z4trlf><svg class="wpt-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M5 12h14" />
-                                                        <path d="m13 6 6 6-6 6" />
-                                                    </svg></span> </a> </div>
-                                    </footer>
-                                </aside>
-                            </div>
-                        </div>
 
-                    </div>
+                            <div class='form-group'>
+                                <!-- <label>Amount to pay</label> -->
+                                <input type='hidden' value='<?= $this->data['d_price'] ?? $this->data['price'] ?>' name='price' class='form-control'><br>
+
+ 
+
+                                <label>Phone number</label>
+                                <input value='<?= $this->_me['user_tel'] ?? "" ?>' name='phone' class='phonee form-control'><br>
+
+                                
+                                <label>Email</label>
+                                <input value='<?= $this->_me['user_email'] ?? "" ?>' name='email' class='phonee form-control' required><br>
+                            </div>
+
+  
+                            <div class='form-group'>
+                                <label>Precise Town/Location for Delivery</label>
+                                <div class='d-flex bd-highlight'>
+                                    <div class="p-2 flex-fill bd-highlight">
+                                        <input value='' name='locationSpecific' id='messageLocation' class='locationSpecific form-control' required >
+                                    </div>
+                                    <div class="p-2 flex-fill bd-highlight">
+                                        <button type="button" class="btn btn-secondary" id="locationButton"><i class="fa fa-map-marker"></i> Attach location</button>
+                                    </div>
+                                </div>
+
+                                <br>
+                            
+                         <button type='submit' class='btn form-control btn-primary'  >Submit Now</button>
+                              
+                            </div>
+
+                            <div class='feedback m-3'></div>
+                            <p class=''> </p>
+                        </div>
+                    </form>
+
+
+
+
                 </div>
             </div>
         </section>
 
+    </main>
 
-        <section class="mfaq" data-component="explainer" data-astro-cid-c5xvugsv>
-            <div class="mfaq__inner" data-astro-cid-c5xvugsv>
-                <?= $this->data['content'] ?>
-            </div>
-        </section>
+     <script> 
 
+     const qty = document.querySelector('input[name="qty"]');
+     qty.addEventListener('change', (e)=> {
+        const no = parseInt(qty.value);
+        if (no < 1) qty.value = 1;
+        const price = parseFloat(`<?= $this->data['price'] ?? 0 ?>`);
 
-        <?php require 'public/includes/footer.inc.php' ?>
+        document.querySelector('.totalPrice').textContent = `KES ${price * no}`;
+     });
+
+    const payforproduct = document.querySelector('#payforproduct');
+    const feedback = document.querySelector(".feedback");
+    payforproduct.addEventListener('submit', async (e)=> {
+        e.preventDefault();
+        const form = new FormData(payforproduct);
+
+        const response = await fetch('/myapp/requests', {method:"POST", body:form});
+        const result = await response.json();
+        feedback.innerHTML = result.msg;
+        feedback.classList.remove('alert-danger');
+
+        if (result.error) {
+            feedback.classList.add('alert-danger');return;
+        } 
+        feedback.classList.add('alert-success');
+
+    });
+            
+            
+   document.getElementById('locationButton').addEventListener('click', function() {
+      if (navigator.geolocation) {
+        
+        navigator.geolocation.getCurrentPosition(function(position) 
+        {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;  
+            // For example, to display the location on a map:
+            const mapUrl = `https://maps.google.com/?q=${latitude},${longitude}`;
+            //window.open(mapUrl, '_blank');
+        
+            // Or, to send the location data to the server:
+            const messageInput = document.getElementById('messageLocation');
+            messageInput.value += `https://maps.google.com/?q=${latitude},${longitude}`;
+            });
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+        });
+             
+            
+        
+    </script>
 </body>
 
 </html>

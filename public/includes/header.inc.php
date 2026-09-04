@@ -4,8 +4,6 @@
 <link rel="icon" type="image/*" href="/public/assets/uploads/<?php echo $this->_company['c_icon'] ?>" />
 <style>
     *{  --primary: <?= $this->_company['c_primary_color'] ?>;  }
-   
-
 </style>
  
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -15,49 +13,15 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="/public/assets/uploads/<?= $this->_company['c_logo'] ?>"> 
-     
-    <meta name="description" content="Explore clinically-proven weight loss treatments including Mounjaro and Wegovy. Clinician-led service with discreet delivery.">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://www.<?= $_SERVER['SERVER_NAME'] ?>/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="<?= $this->_company['c_name'] ?> | UK Trusted Online Pharmacy">
-    <meta property="og:description" content="Explore clinically-proven weight loss treatments including Mounjaro and Wegovy. Clinician-led service with discreet delivery.">
-    
-    <meta property="og:url" content="https://www.<?= $_SERVER['SERVER_NAME'] ?>/">
-    <meta property="og:site_name" content="<?= $this->_company['c_name'] ?>">
-    <meta property="og:locale" content="en_GB">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@SimplePharmacyO">
-    <meta name="twitter:title" content="<?= $this->_company['c_name'] ?> | UK Trusted Online Pharmacy">
-    <meta name="twitter:description" content="Explore clinically-proven weight loss treatments including Mounjaro and Wegovy. Clinician-led service with discreet delivery.">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "<?= $this->_company['c_name'] ?> | UK Trusted Online Pharmacy",
-            "description": "Explore clinically-proven weight loss treatments including Mounjaro and Wegovy. Clinician-led service with discreet delivery.",
-            "url": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/",
-            "dateModified": "2026-01-26"
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/"
-            }]
-        }
-    </script>
+   
+ 
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "<?= $this->_company['c_name'] ?>",
-            "legalName": "Simple Online Healthcare Limited",
+            "legalName": "<?= $this->_company['c_name'] ?> Healthcare Limited",
             "url": "https://<?= $_SERVER['SERVER_NAME'] ?>",
             "logo": "https://<?= $_SERVER['SERVER_NAME'] ?>/<?= $this->_company['c_logo'] ?>",
             "address": {

@@ -71,7 +71,11 @@ class Dashboard_Model extends Model
  
 	 
 	public function getorders($status) {
-	    return $this->_get('orders left join products on p_url = order_product_url', 'p_user_fk, order_status', [Session::get('userid'),$status])[1];
+	    return $this->_get('*
+		products.*, orders.id as order_id, order_status, orders.created_at as order_created_at,
+		product_count
+		from
+		orders left join products on products.id = orders.product_id', ' order_status', [ $status])[1];
 	}
 	
 	

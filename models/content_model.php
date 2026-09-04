@@ -9,8 +9,7 @@ class Content_Model extends Model
  
 	public function getblog($url = '' ) {
 	    if (!empty($url)) {
-	        $data = $this->_get('
-			* blog.*, categories.title as category_title, categories.slug as category_slug 
+	        $data = $this->_get('* blog.*, categories.title as category_title, categories.slug as category_slug 
 			FROM
 			blog left join categories on category_id = categories.id   ', 'blog.slug', [$url], 0  )[1];
 	        if (empty($data)) return false;
@@ -23,9 +22,28 @@ class Content_Model extends Model
 	        
 	        ];
 	    }
+
+		if (!empty($_GET['category'])) {
+
+		$query = "* blog.*, categories.title as category_title, categories.slug as category_slug 
+					FROM
+					blog left join categories on category_id = categories.id";
+			 
+		$blog_data = $this->_get($query, "categories.slug", [$_GET['category']], 1, "order by blog.id desc {$this->pagination()} ")[1];
+		 
+	    	return [
+					'blog'=>$blog_data,
+					'count'=> $this->_get($query, "categories.slug", [$_GET['category']])[0]
+				  ];
+		}
 	    
-	    
-	    return $this->_get("blog order by blog.id desc {$this->pagination()} ") ;
+	    $query = "* blog.*, categories.title as category_title, categories.slug as category_slug 
+					FROM
+					blog left join categories on category_id = categories.id";
+	    return [
+			'blog'=>$this->_get($query, "", [], 1, "order by blog.id desc {$this->pagination()} ")[1],
+			'count'=> $this->_get("blog ")[0]
+			];
 	}
 	public function getblogcategories($categ = '') { 
 	    

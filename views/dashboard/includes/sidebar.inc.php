@@ -1,10 +1,5 @@
 
-        <style>
-            .nav-treeview .nav-item .nav-link {
-                margin-bottom: -5px !important;
-                font-size: 14px;
-            }
-        </style>
+      
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="https://i.gifer.com/ZZ5H.gif" alt="Mizizi" height="60" width="60">
         </div>
@@ -133,7 +128,7 @@
                             <a href="products" class="nav-link  <?= ($pageid=='orders'||$pageid=='purchases')?'active':'' ?> " >
                                 <i class="nav-icon fas fa-dollar"></i>
                                 <p>
-                                    Orders & Purchases
+                                    Orders 
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -152,51 +147,12 @@
                                     </a>
                                 </li>
                                 
-                                <li class="nav-item">
-                                    <a href="/dashboard/purchases/pending" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pending Purchases </p>
-                                    </a>
-                                </li> 
-                                <li class="nav-item">
-                                    <a href="/dashboard/purchases/completed" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Completed Purchases</p>
-                                    </a>
-                                </li>  
-                          
+                              
                             </ul>
                         </li>  
                        
-                          <li class="nav-item ">
-                            <a href="products" class="nav-link  <?= $pageid=='salo'?'active':'' ?> " >
-                                 <i class="nav-icon fas fa-briefcase"></i>
-                                <p>
-                                    Salo Management
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                 
-                            
-                                <li class="nav-item">
-                                    <a href="/dashboard/salo/" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Manage</p>
-                                    </a>
-                                </li> 
                           
-                            </ul>
-                        </li> 
-                        
-                         <li class="nav-item">
-                            <a href="/checkout/chat" class="nav-link  <?= $pageid=='changepasss'?'active':'' ?> " >
-                                <i class="nav-icon fas fa-comment"></i>
-                                <p>
-                                    Chats
-                                </p>
-                            </a>
-                        </li> 
+                     
 
                          <li class="nav-item ">
                             <a href="products" class="nav-link  <?php echo $pageid=='settings'?'active':'' ?> " >
@@ -217,9 +173,7 @@
                                 <li class="nav-item">
                                     <a href="/dashboard/change-pass" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>Change Password</p> </a>
                                 </li> 
-                                <li class="nav-item">
-                                    <a href="/dashboard/change-pin" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>Change Pin</p> </a>
-                                </li> 
+                               
                                 <li class="nav-item">
                                     <a href="/dashboard/logout" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>Logout</p> </a>
                                 </li> 
