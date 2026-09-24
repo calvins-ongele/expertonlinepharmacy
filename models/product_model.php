@@ -1,6 +1,6 @@
 <?php
 
-class Products_Model extends Model {
+class Product_Model extends Model {
 
 	public function __construct() {
 		parent::__construct(); 
