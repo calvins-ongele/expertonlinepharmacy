@@ -10,7 +10,7 @@
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "<?= $this->title ?>",
-            "description": "Explore clinically-proven weight loss treatments including Mounjaro and Wegovy. Clinician-led service with discreet delivery.",
+            "description": "<?= $this->_company['c_short_desc'] ?>.",
             "url": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/",
             "dateModified": "2026-05-26"
         }
