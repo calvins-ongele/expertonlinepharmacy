@@ -3,6 +3,7 @@
 
 <head>
   <?php require 'public/includes/header.inc.php'; ?> 
+  <meta name="robots" content="noindex">
   <style>
         .main-header .main-navbar {
             background: hsl(var(--black));

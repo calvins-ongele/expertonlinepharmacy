@@ -8,6 +8,29 @@
             (window.snowplow.q = window.snowplow.q || []).push(arguments);
         };
     </script>
+    <?php
+        $canonical = "https://{$_SERVER['SERVER_NAME']}/{$_SERVER['REQUEST_URI']}";
+    ?>
+ 
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "<?= $this->title ?>",
+                "item": "<?= $canonical ?>"
+            }
+            ]
+        }
+    </script>
     
     <style>
         :root {

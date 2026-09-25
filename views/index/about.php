@@ -5,16 +5,7 @@
     <?php require 'public/includes/header.inc.php' ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "About Us | UK Trusted Online Pharmacy",
-            "description": "Explore clinically-proven weight loss treatments including Mounjaro and Wegovy. Clinician-led service with discreet delivery.",
-            "url": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/",
-            "dateModified": "2026-01-26"
-        }
-    </script>
+      
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -22,9 +13,16 @@
             "itemListElement": [{
                 "@type": "ListItem",
                 "position": 1,
-                "name": "About Us",
+                "name": "Home",
                 "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/"
-            }]
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "<?= $this->title ?>",
+                "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/about"
+            }
+            ]
         }
     </script>
 </head>

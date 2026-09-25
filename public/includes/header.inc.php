@@ -46,6 +46,16 @@
             }
         }
     </script>
+     <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "<?= $this->title ?>",
+            "description": "<?= $this->_company['c_short_desc'] ?>",
+            "url": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/",
+            "dateModified": "2026-02-26"
+        }
+    </script>
  
     <style>
         :root {

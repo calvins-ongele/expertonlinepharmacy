@@ -68,13 +68,13 @@
                                                  <div class="header__desktop-content" data-astro-cid-wimnwge2>
                                                      <div class="header__dropdown-group header__dropdown-group--level-0" data-astro-cid-wimnwge2>
                                                          <div class="header__dropdown-children" data-astro-cid-wimnwge2>
-                                                             <div class="header__dropdown-group header__dropdown-group--level-1" data-astro-cid-wimnwge2> <a class="header__dropdown-group-link" href="/products/categories/<?= $category['slug'] ?>" data-astro-cid-wimnwge2> <?= $category['title'] ?> </a>
+                                                             <div class="header__dropdown-group header__dropdown-group--level-1" data-astro-cid-wimnwge2> <a class="header__dropdown-group-link" href="/product/categories/<?= $category['slug'] ?>" data-astro-cid-wimnwge2> <?= $category['title'] ?> </a>
                                                                  <div class="header__dropdown-section header__dropdown-section--level-1" data-astro-cid-wimnwge2>
                                                                      <p class="header__dropdown-section-title" data-astro-cid-wimnwge2>Treatments Available</p>
                                                                      <ul class="header__dropdown-section-list" data-astro-cid-wimnwge2>
                                                                         <?php foreach ($category['inner_content'] as $row) {  ?>
                                                                         <li data-astro-cid-wimnwge2> 
-                                                                            <a class="header__dropdown-section-link" href="/products/<?= $row['slug'] ?>" data-astro-cid-wimnwge2> <?= $row['title'] ?> </a> 
+                                                                            <a class="header__dropdown-section-link" href="/product/<?= $row['slug'] ?>" data-astro-cid-wimnwge2> <?= $row['title'] ?> </a> 
                                                                         </li>
                                                                         <?php } ?>
                                                                             

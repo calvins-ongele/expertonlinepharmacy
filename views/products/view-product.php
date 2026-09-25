@@ -26,6 +26,27 @@
     <meta property='article:published_time' content='<?= $this->data['created_at'] ?>'> 
     <link rel='canonical'   href='<?=  $canonical ?>'/>
     <meta property="og:type" content="Product" />
+
+     
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "<?= $this->title ?>",
+                "item": "<?= $canonical ?>"
+            }
+            ]
+        }
+    </script>
        
 
     <script type="application/ld+json">

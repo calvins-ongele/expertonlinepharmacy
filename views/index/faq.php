@@ -5,6 +5,26 @@
 <html class="no-js">
     <head>
        <?php require "public/includes/header.inc.php";?>   
+       
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "<?= $this->title ?>",
+                "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/faq"
+            }
+            ]
+        }
+    </script>
        <style>
         .main-header .main-navbar {
             background: hsl(var(--black));

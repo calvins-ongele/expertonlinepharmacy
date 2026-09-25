@@ -10,7 +10,7 @@
             "itemListElement": [{
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
+                "name": "<?= $this->title ?>",
                 "item": "https://www.<?= $_SERVER['SERVER_NAME'] ?>/"
             }]
         }
@@ -56,14 +56,14 @@
                                         </svg> </span> </div> <span class="hero-placeholder__trustpilot-score" data-astro-cid-d257t26o>4.6</span> <span class="hero-placeholder__trustpilot-count" data-astro-cid-d257t26o>47,000+ reviews</span>
                             </div>
                         </a>
-                        <div class="hero-placeholder__primary-cta" data-astro-cid-d257t26o> <a class="hero-placeholder__cta cta-button" href="/products/categories/erectile-dysfunction-treatments/" data-astro-cid-d257t26o> Weight Loss Treatments <span aria-hidden="true" data-astro-cid-d257t26o>→</span> </a> </div>
+                        <div class="hero-placeholder__primary-cta" data-astro-cid-d257t26o> <a class="hero-placeholder__cta cta-button" href="/product/categories/erectile-dysfunction-treatments/" data-astro-cid-d257t26o> Weight Loss Treatments <span aria-hidden="true" data-astro-cid-d257t26o>→</span> </a> </div>
                         <p class="hero-placeholder__price-qualifier" data-astro-cid-d257t26o>Weight loss treatments with no long-term commitment.</p>
                     </div>
                 </div>
                 <div class="hero-placeholder__categories" data-astro-cid-d257t26o> 
                     
                         <?php foreach($this->_categories as $row) { if ($row['category_type'] === 'blog') continue; ?>
-                        <a class="category-card" href="/products/categories/<?= $row['slug'] ?>/" data-astro-cid-f3saawlv> 
+                        <a class="category-card" href="/product/categories/<?= $row['slug'] ?>/" data-astro-cid-f3saawlv> 
                             <span class="category-card__image" data-astro-cid-f3saawlv>
                                 <picture data-astro-cid-f3saawlv="true">
                                     <source srcset="/<?= $row['image'] ?> 80w, /<?= $row['image'] ?> 160w, /<?= $row['image'] ?> 240w" type="image/webp" sizes="80px">

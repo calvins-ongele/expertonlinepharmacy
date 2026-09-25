@@ -4,7 +4,7 @@
 <head>
     <?php require 'public/includes/header.inc.php'  ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+<meta name="robots" content="noindex">
     <?php
 
         $imageLink = "https://{$_SERVER['SERVER_NAME']}/{$this->data['image']}";
